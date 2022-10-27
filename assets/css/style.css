@@ -1,0 +1,449 @@
+@charset "UTF-8";
+@media screen and (min-width: 1441px) {
+  .__pc {
+    display: block;
+  }
+  .__sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .__pc {
+    display: block;
+  }
+  .__sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .__pc {
+    display: none;
+  }
+  .__sp {
+    display: block;
+  }
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  color: #444;
+  font-family: source-han-sans-cjk-ja,"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  line-height: 1;
+  font-weight: 300;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+  html, body {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html, body {
+    font-size: 8px;
+  }
+}
+
+html a, body a {
+  text-decoration: none;
+  color: #444;
+}
+
+html a:hover, body a:hover {
+  opacity: 0.5;
+  transition: .5s;
+}
+
+html h2, html h3, html h4, body h2, body h3, body h4 {
+  font-weight: 500;
+  color: #111;
+  letter-spacing: 0.1rem;
+}
+
+html p, html li, body p, body li {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.__en {
+  font-family: neue-kabel, sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: 1s;
+  background: #fff;
+}
+
+header .headerWrap {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1440px) {
+  header .headerWrap {
+    width: 90%;
+  }
+}
+
+header .headerWrap h1 {
+  font-size: 4.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+header .headerWrap h1 a {
+  color: #111;
+}
+
+header .headerWrap nav {
+  font-weight: 600;
+}
+
+header .headerWrap nav ul {
+  display: flex;
+  gap: 4rem;
+  letter-spacing: 0.1rem;
+}
+
+header .headerWrap nav ul a {
+  color: #444;
+}
+
+@media screen and (max-width: 767px) {
+  header .headerWrap {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  header .headerWrap nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+  }
+  header .headerWrap nav.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  header .headerWrap nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
+  header .headerWrap nav ul li {
+    font-size: 2.4rem;
+  }
+  header .headerWrap nav ul a {
+    color: #444;
+  }
+  header .headerWrap #toggle {
+    width: 4.8rem;
+    height: 4.8rem;
+    position: fixed;
+    top: 2.6rem;
+    right: 5%;
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+  }
+  header .headerWrap #toggle:hover {
+    opacity: 0.8;
+  }
+  header .headerWrap #toggle span.line {
+    width: 4.8rem;
+    height: 0.3rem;
+    background: #111;
+    z-index: 9999;
+    transition: .5s;
+    border-radius: 0.2rem;
+    position: absolute;
+  }
+  header .headerWrap #toggle span.line#line1 {
+    top: 0.7rem;
+  }
+  header .headerWrap #toggle span.line#line1.line1 {
+    transform: rotate(-405deg);
+    top: 2.7rem;
+  }
+  header .headerWrap #toggle span.line#line2 {
+    top: 50%;
+  }
+  header .headerWrap #toggle span.line#line2.line2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+  header .headerWrap #toggle span.line#line3 {
+    bottom: 0.4rem;
+  }
+  header .headerWrap #toggle span.line#line3.line3 {
+    transform: rotate(405deg);
+    bottom: 1.8rem;
+  }
+}
+
+#headline {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: #fff;
+}
+
+#headline #bg {
+  height: 100%;
+  width: 100%;
+}
+
+#headline #bg canvas {
+  animation: bgAnime infinite 10s;
+}
+
+@keyframes bgAnime {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+#headline #copy {
+  margin: 0 auto;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10%;
+  mix-blend-mode: difference;
+}
+
+@media screen and (max-width: 1440px) {
+  #headline #copy {
+    margin-left: 5%;
+  }
+}
+
+#headline #copy #mainCopy {
+  line-height: 1.3;
+  font-size: 6.6rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+#headline #copy #subCopy {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-left: 0.4rem;
+  letter-spacing: 0.4rem;
+}
+
+main {
+  padding: 5rem 0;
+}
+
+main section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+main section h2 {
+  font-size: 4.8rem;
+  margin-bottom: 4rem;
+}
+
+main section h3 {
+  font-size: 2.4rem;
+  margin-bottom: 4rem;
+}
+
+main section p {
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
+main section .box a {
+  font-size: 2.4rem;
+  border: 1px solid #111;
+  width: 24rem;
+  height: 8rem;
+  margin: 0 auto;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2rem;
+}
+
+main section .box a:hover {
+  opacity: 1;
+  background: #111;
+  color: #fff;
+}
+
+footer #copyright {
+  height: 12rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+#index main {
+  padding-top: 10rem;
+}
+
+@media screen and (max-width: 767px) {
+  #index main section#about {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+#index main section#about p {
+  margin-bottom: 0;
+}
+
+#index main section#about p .__en {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#index main section .storyWrap {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  #index main section .storyWrap {
+    flex-direction: column;
+  }
+}
+
+#index main section .storyWrap li {
+  width: calc( 100% / 3);
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  #index main section .storyWrap li {
+    width: 100%;
+  }
+}
+
+#index main section .storyWrap li a:hover {
+  opacity: 1;
+}
+
+#index main section .storyWrap li a:hover img {
+  opacity: 0.5;
+  transition: .5s;
+}
+
+#index main section .storyWrap li:hover .linkTxt {
+  color: #111;
+}
+
+#index main section .storyWrap li img {
+  width: 100%;
+}
+
+#index main section .storyWrap li .linkTxt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 767px) {
+  #index main section#me {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+#index main section#me h3 {
+  letter-spacing: 0.1rem;
+}
+
+#index main section#me ul {
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+#index main section#me ul:last-child {
+  margin-bottom: 0;
+}
+
+#index main section#me ul.otherList li {
+  line-height: 2;
+}
+
+#index main section#me ul .__en {
+  font-weight: 500;
+}
+
+#index main section#me ul h4 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+#index main section#me .wrap .frame {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+#index main section#me .wrap .frame .box {
+  width: 24rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #111 1px solid;
+  margin-bottom: -0.1rem;
+}
+
+#index main section#me .wrap .frame .box.left {
+  background: #111;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+/*# sourceMappingURL=style.css.map */
