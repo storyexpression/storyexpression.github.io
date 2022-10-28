@@ -39,13 +39,13 @@ html, body {
 
 @media screen and (max-width: 1440px) {
   html, body {
-    font-size: 9px;
+    font-size: 8px;
   }
 }
 
 @media screen and (max-width: 767px) {
   html, body {
-    font-size: 8px;
+    font-size: 7px;
   }
 }
 
@@ -268,7 +268,7 @@ header .headerWrap nav ul a {
 }
 
 main {
-  padding: 5rem 0;
+  padding: 10rem 0 5rem 0;
 }
 
 main section {
@@ -291,23 +291,32 @@ main section p {
   font-weight: 400;
 }
 
-main section .box a {
-  font-size: 2.4rem;
-  border: 1px solid #111;
-  width: 24rem;
-  height: 8rem;
-  margin: 0 auto;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 0.2rem;
+main section p:last-child {
+  margin: 0;
 }
 
-main section .box a:hover {
-  opacity: 1;
-  background: #111;
-  color: #fff;
+main.story {
+  width: 80%;
+  margin: 0 auto;
+}
+
+main.story section {
+  text-align: left;
+}
+
+@media screen and (max-width: 1440px) {
+  main.story {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main.story {
+    width: 100%;
+    margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 footer #copyright {
@@ -318,10 +327,6 @@ footer #copyright {
   justify-content: center;
   font-weight: 500;
   letter-spacing: 0.1rem;
-}
-
-#index main {
-  padding-top: 10rem;
 }
 
 @media screen and (max-width: 767px) {
