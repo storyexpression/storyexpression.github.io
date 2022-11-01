@@ -452,20 +452,46 @@ footer #copyright {
   letter-spacing: 0.1rem;
 }
 
-#test header {
+#test header, #test2 header {
   background: #111;
 }
 
-#test header h1 a {
+#test header h1 a, #test2 header h1 a {
   color: #fff;
 }
 
-#test header ul a {
+#test header ul a, #test2 header ul a {
   color: #fff;
 }
 
-#test main {
+#test main, #test2 main {
   width: 100%;
+}
+
+#test2 header {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#test2 header.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#test2 #mouseOver {
+  height: 10rem;
+  width: 100%;
+  background: transparent;
+  position: fixed;
+  z-index: 8;
+}
+
+#test2 main {
+  padding-top: 0;
+}
+
+#test2 main section {
+  padding-top: 0;
 }
 
 .test {
