@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @media screen and (min-width: 1441px) {
   .__pc {
     display: block;
@@ -31,7 +30,7 @@ html, body {
   width: 100%;
   background: #fff;
   color: #444;
-  font-family: source-han-sans-cjk-ja,"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-family: fot-tsukuaoldmin-pr6n, sans-serif;
   line-height: 1;
   font-weight: 300;
   font-size: 10px;
@@ -61,7 +60,7 @@ html a:hover, body a:hover {
 
 html h2, html h3, html h4, body h2, body h3, body h4 {
   font-weight: 500;
-  color: #111;
+  color: #281200;
   letter-spacing: 0.1rem;
 }
 
@@ -75,7 +74,12 @@ html p, html li, body p, body li {
 }
 
 .__en {
-  font-family: neue-kabel, sans-serif;
+  font-family: baskerville-urw, serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 header {
@@ -87,21 +91,29 @@ header {
   z-index: 10;
   transition: 1s;
   background: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+header.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 header .headerWrap {
   height: 100%;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-@media screen and (max-width: 1440px) {
-  header .headerWrap {
-    width: 90%;
-  }
 }
 
 header .headerWrap h1 {
@@ -126,6 +138,14 @@ header .headerWrap nav ul {
 
 header .headerWrap nav ul a {
   color: #444;
+}
+
+#mouseOver {
+  height: 10rem;
+  width: 100%;
+  background: transparent;
+  position: fixed;
+  z-index: 8;
 }
 
 @media screen and (max-width: 767px) {
@@ -183,7 +203,7 @@ header .headerWrap nav ul a {
   header .headerWrap #toggle span.line {
     width: 4.8rem;
     height: 0.3rem;
-    background: #111;
+    background: #281200;
     z-index: 9999;
     transition: .5s;
     border-radius: 0.2rem;
@@ -210,61 +230,6 @@ header .headerWrap nav ul a {
     transform: rotate(405deg);
     bottom: 1.8rem;
   }
-}
-
-#headline {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  color: #fff;
-}
-
-#headline #bg {
-  height: 100%;
-  width: 100%;
-}
-
-#headline #bg canvas {
-  animation: bgAnime infinite 10s;
-}
-
-@keyframes bgAnime {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    filter: hue-rotate(360deg);
-  }
-}
-
-#headline #copy {
-  margin: 0 auto;
-  z-index: 5;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-left: 10%;
-  mix-blend-mode: difference;
-}
-
-@media screen and (max-width: 1440px) {
-  #headline #copy {
-    margin-left: 5%;
-  }
-}
-
-#headline #copy #mainCopy {
-  line-height: 1.3;
-  font-size: 6.6rem;
-  font-weight: 600;
-  margin-bottom: 3.2rem;
-}
-
-#headline #copy #subCopy {
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin-left: 0.4rem;
-  letter-spacing: 0.4rem;
 }
 
 main {
@@ -329,178 +294,114 @@ footer #copyright {
   letter-spacing: 0.1rem;
 }
 
-@media screen and (max-width: 767px) {
-  #index main section#about {
-    width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+#index {
+  background: #281200;
 }
 
-#index main section#about p {
-  margin-bottom: 0;
-}
-
-#index main section#about p .__en {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-#index main section .storyWrap {
-  display: flex;
-}
-
-@media screen and (max-width: 767px) {
-  #index main section .storyWrap {
-    flex-direction: column;
-  }
-}
-
-#index main section .storyWrap li {
-  width: calc( 100% / 3);
-  position: relative;
-}
-
-@media screen and (max-width: 767px) {
-  #index main section .storyWrap li {
-    width: 100%;
-  }
-}
-
-#index main section .storyWrap li a:hover {
-  opacity: 1;
-}
-
-#index main section .storyWrap li a:hover img {
-  opacity: 0.5;
-  transition: .5s;
-}
-
-#index main section .storyWrap li:hover .linkTxt {
-  color: #111;
-}
-
-#index main section .storyWrap li img {
-  width: 100%;
-}
-
-#index main section .storyWrap li .linkTxt {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.4rem;
-  font-weight: 500;
+#index main h2 {
+  font-size: 6.4rem;
+  margin-bottom: 4rem;
   color: #fff;
-  letter-spacing: 0.2rem;
+}
+
+#index main ul li {
+  font-size: 4.8rem;
+  margin-bottom: 2.4rem;
+}
+
+#index main ul li a {
+  color: #fff;
+}
+
+#index footer {
+  background: #281200;
+  color: #fff;
+}
+
+#charaDesign main {
+  width: 100%;
+  height: 100%;
+  padding: 0;
 }
 
 @media screen and (max-width: 767px) {
-  #index main section#me {
+  #charaDesign main {
+    padding: 10rem 0 5rem 0;
+  }
+}
+
+#charaDesign main #container {
+  display: flex;
+  gap: 2%;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#charaDesign main #container .img {
+  width: 40%;
+  height: 100%;
+  background: red;
+}
+
+#charaDesign main #container .intro {
+  width: 58%;
+  height: 100%;
+  background: blue;
+}
+
+@media screen and (max-width: 767px) {
+  #charaDesign main #container {
+    flex-direction: column;
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
   }
+  #charaDesign main #container .img {
+    width: 100%;
+  }
+  #charaDesign main #container .intro {
+    width: 100%;
+  }
 }
 
-#index main section#me h3 {
-  letter-spacing: 0.1rem;
-}
-
-#index main section#me ul {
-  margin-bottom: 2rem;
-  font-weight: 400;
-}
-
-#index main section#me ul:last-child {
-  margin-bottom: 0;
-}
-
-#index main section#me ul.otherList li {
-  line-height: 2;
-}
-
-#index main section#me ul .__en {
-  font-weight: 500;
-}
-
-#index main section#me ul h4 {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-}
-
-#index main section#me .wrap .frame {
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-}
-
-#index main section#me .wrap .frame .box {
-  width: 24rem;
-  height: 8rem;
+#load {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: .5s;
+  font-size: 6.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: #111 1px solid;
-  margin-bottom: -0.1rem;
+  background: #fff;
+  z-index: 9999;
+  letter-spacing: 1rem;
 }
 
-#index main section#me .wrap .frame .box.left {
-  background: #111;
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.1rem;
-}
-
-#test header, #test2 header {
-  background: #111;
-}
-
-#test header h1 a, #test2 header h1 a {
-  color: #fff;
-}
-
-#test header ul a, #test2 header ul a {
-  color: #fff;
-}
-
-#test main, #test2 main {
-  width: 100%;
-}
-
-#test2 header {
-  visibility: hidden;
+#load span {
   opacity: 0;
+  visibility: hidden;
+  animation: charaAnime 2000ms ease-in-out 400ms alternate;
 }
 
-#test2 header.show {
-  visibility: visible;
+#load span.show {
   opacity: 1;
+  visibility: visible;
 }
 
-#test2 #mouseOver {
-  height: 10rem;
-  width: 100%;
-  background: transparent;
-  position: fixed;
-  z-index: 8;
-}
-
-#test2 main {
-  padding-top: 0;
-}
-
-#test2 main section {
-  padding-top: 0;
-}
-
-.test {
-  width: 100%;
-  height: 100%;
-}
-
-.test img {
-  width: 100%;
-  height: auto;
+@keyframes charaAnime {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  50% {
+    opacity: 0.5;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 /*# sourceMappingURL=style.css.map */
