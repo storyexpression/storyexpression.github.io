@@ -90,7 +90,7 @@ header {
   left: 0;
   z-index: 10;
   transition: 1s;
-  background: #fff;
+  background: #281200;
   visibility: hidden;
   opacity: 0;
 }
@@ -123,7 +123,7 @@ header .headerWrap h1 {
 }
 
 header .headerWrap h1 a {
-  color: #111;
+  color: #fff;
 }
 
 header .headerWrap nav {
@@ -137,7 +137,7 @@ header .headerWrap nav ul {
 }
 
 header .headerWrap nav ul a {
-  color: #444;
+  color: #fff;
 }
 
 #mouseOver {
@@ -294,8 +294,20 @@ footer #copyright {
   letter-spacing: 0.1rem;
 }
 
+footer #copyright span:first-child {
+  margin-right: .5em;
+}
+
+footer #copyright span:last-child {
+  margin-left: .5em;
+}
+
 #index {
   background: #281200;
+}
+
+#index header {
+  visibility: hidden;
 }
 
 #index main {
@@ -386,27 +398,5 @@ footer #copyright {
 
 #load span {
   opacity: 0;
-  visibility: hidden;
-  animation: charaAnime 2000ms ease-in-out 400ms alternate;
-}
-
-#load span.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-@keyframes charaAnime {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  50% {
-    opacity: 0.5;
-    visibility: visible;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
 }
 /*# sourceMappingURL=style.css.map */
