@@ -12,4 +12,4 @@ function pageUp(){
     'skewY' : '-90deg',
     'opacity' : 0,
   },2800);
-}
+};
