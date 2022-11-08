@@ -10,6 +10,6 @@ function pageUp(){
     'x' : -screenWidth,
     'y' :-screenHeight,
     'skewY' : '-90deg',
-    'opacity' : 0,
+    'opacity' : 0
   },2800);
 };
