@@ -3,10 +3,13 @@ let screenWidth = window.innerWidth;
 
 $('#load span').transit({
   'opacity' : 1
-},1800);
+},1800,pageUp);
 
-$('#load').transit({
-  'x' : -screenWidth,
-  'opacity' : 0,
-  'delay' : 2000
-},1800);
+function pageUp(){
+  $('#load').transit({
+    'x' : -screenWidth,
+    'y' :-screenHeight,
+    'skewY' : '-90deg',
+    'opacity' : 0,
+  },2800);
+}
