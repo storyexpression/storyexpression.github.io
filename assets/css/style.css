@@ -398,7 +398,8 @@ footer #copyright span:last-child {
 }
 
 #load.loaded {
-  transform: translate(-100%, -100%) skewY(-90deg) rotateY(-90deg);
+  transform: translate(-100%, -100%) skewY(-60deg) rotateY(-90deg);
+  -webkit-transform: translate(-100%, -100%) skewY(-60deg) rotateY(-90deg);
   transform-origin: 0 0;
   opacity: 0;
 }
