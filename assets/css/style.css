@@ -394,6 +394,12 @@ footer #copyright span:last-child {
   background: #fff;
   z-index: 9999;
   letter-spacing: 1rem;
+  transition: 2.8s;
+}
+
+#load.loaded {
+  transform: translate(-100%, -100%) rotate(-90deg);
+  opacity: 0;
 }
 
 #load span {
