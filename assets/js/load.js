@@ -9,6 +9,6 @@ function pageUp(){
   $('#load').transit({
     'x' : -screenWidth,
     'y' : -screenHeight,
-    'rotate' : '-90deg',
+    'skewY' : '-90deg',
     'opacity' : 0
   },2800)};
