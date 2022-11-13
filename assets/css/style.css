@@ -378,6 +378,51 @@ footer #copyright span:last-child {
   width: 28vw;
   height: 16vw;
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 2%;
+}
+
+#charaDesign main .container .charaBox .img {
+  width: 40%;
+}
+
+#charaDesign main .container .charaBox .img img {
+  width: 100%;
+  border: 1px solid #281200;
+}
+
+#charaDesign main .container .charaBox .detail {
+  width: 54%;
+}
+
+#charaDesign main .container .charaBox .detail .charaName {
+  color: #281200;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-size: 2.4rem;
+  border: 1px solid #281200;
+  width: 100%;
+}
+
+#charaDesign main .container .charaBox .detail .charaDetail {
+  margin-bottom: 2rem;
+  border: 1px solid #281200;
+  width: 100%;
+}
+
+#charaDesign main .container .charaBox .detail .btn {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #281200;
+  font-size: 1.6rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -387,13 +432,37 @@ footer #copyright span:last-child {
   }
   #charaDesign main .container .charaBox {
     width: 100%;
-    height: 32rem;
+    height: auto;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  #charaDesign main .container .charaBox .img {
+    width: 100%;
+    padding: 0 5%;
+    margin-bottom: 2rem;
+  }
+  #charaDesign main .container .charaBox .detail {
+    width: 100%;
+    padding: 0 5%;
+  }
+  #charaDesign main .container .charaBox .detail .charaName {
+    width: 100%;
+    padding: 0 5%;
+  }
+  #charaDesign main .container .charaBox .detail .charaDetail {
+    padding: 0 5%;
+    margin-bottom: 2rem;
+  }
+  #charaDesign main .container .charaBox .detail .btn {
+    font-size: 1.6rem;
+    padding: 0 5%;
   }
 }
 
 #comicPage .turnBtn {
   position: absolute;
-  width: 5%;
+  width: 10%;
   height: 100%;
   top: 0;
   left: 0;
