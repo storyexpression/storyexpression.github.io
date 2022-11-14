@@ -347,6 +347,10 @@ footer #copyright span:last-child {
   color: #fff;
 }
 
+#charaDesign main {
+  width: 100%;
+}
+
 @media screen and (max-width: 767px) {
   #charaDesign main {
     padding: 10rem 0 5rem 0;
@@ -377,7 +381,6 @@ footer #copyright span:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
   gap: 1.4rem;
 }
 
@@ -385,6 +388,8 @@ footer #copyright span:last-child {
   width: 22.8rem;
   height: 35rem;
   border: 1px solid #271D02;
+  display: flex;
+  align-items: center;
 }
 
 #charaDesign main .container .charaBox .img img {
@@ -401,18 +406,24 @@ footer #copyright span:last-child {
 
 #charaDesign main .container .charaBox .detail .charaName {
   color: #271D02;
-  text-align: left;
-  font-size: 2.4rem;
+  font-size: 3.6rem;
   border: 1px solid #271D02;
   width: 100%;
   height: 8rem;
   margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #charaDesign main .container .charaBox .detail .charaDetail {
   border: 1px solid #271D02;
   width: 100%;
   height: 19.6rem;
+}
+
+#charaDesign main .container .charaBox .detail .charaDetail p {
+  margin: 2rem;
 }
 
 #charaDesign main .container .charaBox .detail .btn {
@@ -434,31 +445,27 @@ footer #copyright span:last-child {
   }
   #charaDesign main .container .charaBox {
     width: 100%;
+    padding: 0 5%;
     height: auto;
     flex-direction: column;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    gap: 2rem;
   }
   #charaDesign main .container .charaBox .img {
     width: 100%;
-    padding: 0 5%;
-    margin-bottom: 2rem;
+    height: auto;
   }
   #charaDesign main .container .charaBox .detail {
     width: 100%;
-    padding: 0 5%;
+    height: auto;
+    gap: 2rem;
   }
   #charaDesign main .container .charaBox .detail .charaName {
     width: 100%;
-    padding: 0 5%;
-  }
-  #charaDesign main .container .charaBox .detail .charaDetail {
-    padding: 0 5%;
-    margin-bottom: 2rem;
   }
   #charaDesign main .container .charaBox .detail .btn {
     font-size: 1.6rem;
-    padding: 0 5%;
   }
 }
 
