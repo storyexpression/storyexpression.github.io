@@ -40,3 +40,18 @@ $('.turnLeft'+','+'.turnRight').on('mouseleave',function(){
   $('.turnBtn').css('opacity','0');
   $('.turnBtn a').css({'visibility':'hidden','opacity':'0'});
 });
+
+// 何かに使えるかも
+
+let screenHeight = window.innerHeight;
+let screenWidth = window.innerWidth;
+
+// load
+
+$('#load .loadImg').transit({
+  'opacity' : 1
+},1800,pageUp);
+
+function pageUp(){
+  $('#load').addClass('loaded');
+};
