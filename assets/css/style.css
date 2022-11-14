@@ -1,4 +1,4 @@
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1281px) {
   .__pc {
     display: block;
   }
@@ -7,7 +7,7 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1280px) {
   .__pc {
     display: block;
   }
@@ -28,15 +28,15 @@
 html, body {
   height: 100%;
   width: 100%;
-  background: #281200;
+  background: #271D02;
   color: #444;
-  font-family: fot-tsukuaoldmin-pr6n, sans-serif;
+  font-family: kinuta-maruminold-stdn, serif;
   line-height: 1;
   font-weight: 300;
   font-size: 10px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1280px) {
   html, body {
     font-size: 8px;
   }
@@ -60,7 +60,7 @@ html a:hover, body a:hover {
 
 html h2, html h3, html h4, body h2, body h3, body h4 {
   font-weight: 500;
-  color: #281200;
+  color: #271D02;
   letter-spacing: 0.1rem;
 }
 
@@ -90,7 +90,7 @@ header {
   left: 0;
   z-index: 10;
   transition: 1s;
-  background: #281200;
+  background: #271D02;
   visibility: hidden;
   opacity: 0;
 }
@@ -219,7 +219,7 @@ header .headerWrap nav ul a {
   header .headerWrap #toggle span.line#line1.line1 {
     transform: rotate(-405deg);
     top: 2.7rem;
-    background: #281200;
+    background: #271D02;
   }
   header .headerWrap #toggle span.line#line2 {
     top: 50%;
@@ -234,7 +234,7 @@ header .headerWrap nav ul a {
   header .headerWrap #toggle span.line#line3.line3 {
     transform: rotate(405deg);
     bottom: 1.8rem;
-    background: #281200;
+    background: #271D02;
   }
 }
 
@@ -275,7 +275,7 @@ main.story section {
   text-align: left;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1280px) {
   main.story {
     width: 90%;
   }
@@ -292,7 +292,7 @@ main.story section {
 
 footer {
   transition: 1s;
-  background: #281200;
+  background: #271D02;
 }
 
 footer #copyright {
@@ -315,7 +315,7 @@ footer #copyright span:last-child {
 }
 
 #index {
-  background: #281200;
+  background: #271D02;
 }
 
 #index header {
@@ -323,7 +323,7 @@ footer #copyright span:last-child {
 }
 
 #index main {
-  background: #281200;
+  background: #271D02;
   letter-spacing: 1rem;
 }
 
@@ -343,13 +343,8 @@ footer #copyright span:last-child {
 }
 
 #index footer {
-  background: #281200;
+  background: #271D02;
   color: #fff;
-}
-
-#charaDesign main {
-  width: 90%;
-  margin: 0 auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -370,58 +365,65 @@ footer #copyright span:last-child {
 
 #charaDesign main .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 4rem;
+  gap: 4rem;
 }
 
 #charaDesign main .container .charaBox {
-  width: 28vw;
-  height: 16vw;
+  width: 55rem;
+  height: 40rem;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   display: flex;
-  gap: 2%;
+  gap: 1.4rem;
 }
 
 #charaDesign main .container .charaBox .img {
-  width: 40%;
+  width: 22.8rem;
+  height: 35rem;
+  border: 1px solid #271D02;
 }
 
 #charaDesign main .container .charaBox .img img {
   width: 100%;
-  border: 1px solid #281200;
 }
 
 #charaDesign main .container .charaBox .detail {
-  width: 54%;
+  width: 25.4rem;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #charaDesign main .container .charaBox .detail .charaName {
-  color: #281200;
-  margin-bottom: 2rem;
+  color: #271D02;
   text-align: left;
   font-size: 2.4rem;
-  border: 1px solid #281200;
+  border: 1px solid #271D02;
   width: 100%;
+  height: 8rem;
+  margin-bottom: 0;
 }
 
 #charaDesign main .container .charaBox .detail .charaDetail {
-  margin-bottom: 2rem;
-  border: 1px solid #281200;
+  border: 1px solid #271D02;
   width: 100%;
+  height: 19.6rem;
 }
 
 #charaDesign main .container .charaBox .detail .btn {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%;
-  height: 8rem;
+  height: 4.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #281200;
+  border: 1px solid #271D02;
   font-size: 1.6rem;
 }
 
@@ -529,7 +531,7 @@ footer #copyright span:last-child {
 }
 
 #comicPage main #container .left {
-  border-right: 1px solid #281200;
+  border-right: 1px solid #271D02;
 }
 
 #comicPage footer {
@@ -566,7 +568,7 @@ footer #copyright span:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #281200;
+  background: #271D02;
   z-index: 9999;
   letter-spacing: 1rem;
   transition: 2.8s;
