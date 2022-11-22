@@ -48,9 +48,12 @@ let screenWidth = window.innerWidth;
 
 // load
 
-$('#load .loadImg').transit({
-  'opacity' : 1
-},1800,pageUp);
+$('#load .loadImg h1').textPerspecAnimate();
+$('#load .loadImg p').textPerspecAnimate();
+$('#load .loadImg svg').transit({
+  opacity : 1,
+  dilay : 1000
+},1000);
 
 function pageUp(){
   $('#load').addClass('loaded');
