@@ -306,14 +306,6 @@ footer #copyright {
   opacity: 0.3;
 }
 
-footer #copyright span:first-child {
-  margin-right: .5em;
-}
-
-footer #copyright span:last-child {
-  margin-left: .5em;
-}
-
 #index {
   background: #271D02;
 }
@@ -599,15 +591,48 @@ footer #copyright span:last-child {
   color: #fff;
   text-align: center;
   font-size: 4.8rem;
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
 }
 
 #member main .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8.8rem;
+  margin-bottom: 6.8rem;
   gap: 2rem;
+  position: relative;
+}
+
+#member main .container .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 72.4rem;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#member main .container .arrow .left, #member main .container .arrow .right {
+  position: absolute;
+  transition: 1s;
+}
+
+#member main .container .arrow .left:hover, #member main .container .arrow .right:hover {
+  opacity: 0.5;
+}
+
+#member main .container .arrow .left svg, #member main .container .arrow .right svg {
+  width: 7.6rem;
+  height: 7.6rem;
+  fill: #fff;
+}
+
+#member main .container .arrow .left {
+  left: 0;
+}
+
+#member main .container .arrow .right {
+  right: 0;
 }
 
 #member main .container .memberBox {
@@ -622,10 +647,11 @@ footer #copyright span:last-child {
   opacity: 0.27;
   cursor: pointer;
   transition: 1s;
+  position: relative;
 }
 
 #member main .container .memberBox:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 #member main .container .memberBox.checked {
@@ -634,6 +660,8 @@ footer #copyright span:last-child {
   gap: 2.8rem;
   border-radius: 1.4rem;
   opacity: 1;
+  z-index: 5;
+  cursor: auto;
 }
 
 #member main .container .memberBox.checked .img {
@@ -755,6 +783,19 @@ footer #copyright span:last-child {
 
 #member main .dot span.checked {
   opacity: 1;
+}
+
+#member footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#member footer #copyright {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
 }
 
 #load {
