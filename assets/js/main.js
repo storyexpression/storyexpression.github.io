@@ -58,3 +58,48 @@ $('#load .loadImg svg').transit({
 function pageUp(){
   $('#load').addClass('loaded');
 };
+
+// memberSlider
+
+let slideNumber = 0;
+
+// arrow left
+
+$('#member .arrow .left').on('click',leftSlide);
+
+function leftSlide() {
+  slideNumber--;
+  if(slideNumber < 0){
+    slideNumber = 4;
+  }
+
+  $(".memberBox").removeClass("checked");
+  $(".memberBox").eq(slideNumber).addClass("checked");
+  $('.memberBox').eq(slideNumber + 1).insertBefore('.memberBox').eq(slideNumber);
+
+  $(".dot span").removeClass("checked");
+  $(".dot span").eq(slideNumber).addClass("checked");
+  $('.memberBox').eq(slideNumber).remove('.memberBox').eq(slideNumber - 1);
+
+}
+
+// arrow right
+
+$('#member .arrow .right').on('click',rightSlide);
+
+function rightSlide() {
+
+  slideNumber++;
+  if(slideNumber > 4){
+    slideNumber = 0;
+  }
+
+  $(".memberBox").removeClass("checked");
+  $(".memberBox").eq(slideNumber).addClass("checked");
+  $('.memberBox').eq(slideNumber - 1).insertBefore('.memberBox').eq(slideNumber);
+
+  $(".dot span").removeClass("checked");
+  $(".dot span").eq(slideNumber).addClass("checked");
+  $('.memberBox').eq(slideNumber).remove('.memberBox').eq(slideNumber + 1);
+
+}
