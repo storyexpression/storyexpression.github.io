@@ -65,27 +65,37 @@ let slideNumber = 0;
 
 // arrow left
 
-$('#member .arrow .left').on('click',leftSlide);
+$('#member .arrow .left').on('click',leftChange);
 
-function leftSlide() {
+function leftChange() {
   slideNumber--;
   if(slideNumber < 0){
     slideNumber = 4;
   }
 
-  $(".memberBox").removeClass("checked");
-  $(".memberBox").eq(slideNumber).addClass("checked");
-  $('.memberBox').eq(slideNumber + 1).insertBefore('.memberBox').eq(slideNumber);
+  $(".memberBox").eq(slideNumber - 2).removeClass("checked");
+  $(".memberBox").eq(slideNumber - 3).addClass("checked");
 
   $(".dot span").removeClass("checked");
   $(".dot span").eq(slideNumber).addClass("checked");
-  $('.memberBox').eq(slideNumber).remove('.memberBox').eq(slideNumber - 1);
+
 
 }
 
 // arrow right
 
-$('#member .arrow .right').on('click',rightSlide);
+$('#member .arrow .right').on('click',rightChange);
+
+function rightChange() {
+  slideNumber++;
+  if(slideNumber > 4){
+    slideNumber = 0;
+  }
+    $(".memberBox").eq(slideNumber -4).removeClass("checked");
+    $(".memberBox").eq(slideNumber -3).addClass("checked");
+    $(".dot span").removeClass("checked");
+    $(".dot span").eq(slideNumber).addClass("checked");
+}
 
 function rightSlide() {
 
@@ -94,12 +104,17 @@ function rightSlide() {
     slideNumber = 0;
   }
 
-  $(".memberBox").removeClass("checked");
-  $(".memberBox").eq(slideNumber).addClass("checked");
-  $('.memberBox').eq(slideNumber - 1).insertBefore('.memberBox').eq(slideNumber);
+  // slide right
 
-  $(".dot span").removeClass("checked");
-  $(".dot span").eq(slideNumber).addClass("checked");
-  $('.memberBox').eq(slideNumber).remove('.memberBox').eq(slideNumber + 1);
+  $('li .memberBox').eq(slideNumber).replaceWith('li .memberBox').eq(slideNumber + 1);
+
+
+}
+
+function removeLeft() {
+  
+    // remove left
+
+    $('.memberList').remove('.memberBox').eq(slideNumber + 1);
 
 }
