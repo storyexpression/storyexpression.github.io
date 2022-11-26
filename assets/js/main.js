@@ -62,8 +62,27 @@ function pageUp(){
 // memberSlider
 
 let slideNumber = 0;
+let clickNumber = 0;
 
 // arrow left
+$('#member .arrow .left').on('click',leftSlide);
+
+function leftSlide() {
+
+  clickNumber--;
+  if(clickNumber < 0){
+    clickNumber = 4;
+  }
+
+  $('.memberBox').removeClass('num0 num1 num2 num3 num4');
+
+  $('.memberBox').eq(clickNumber-1).addClass('num0');
+  $('.memberBox').eq(clickNumber-2).addClass('num1');
+  $('.memberBox').eq(clickNumber-3).addClass('num2');
+  $('.memberBox').eq(clickNumber-4).addClass('num3');
+  $('.memberBox').eq(clickNumber-5).addClass('num4');
+
+}
 
 $('#member .arrow .left').on('click',leftChange);
 
@@ -79,42 +98,42 @@ function leftChange() {
   $(".dot span").removeClass("checked");
   $(".dot span").eq(slideNumber).addClass("checked");
 
-
 }
 
 // arrow right
 
-$('#member .arrow .right').on('click',rightChange);
-
-function rightChange() {
-  slideNumber++;
-  if(slideNumber > 4){
-    slideNumber = 0;
-  }
-    $(".memberBox").eq(slideNumber -4).removeClass("checked");
-    $(".memberBox").eq(slideNumber -3).addClass("checked");
-    $(".dot span").removeClass("checked");
-    $(".dot span").eq(slideNumber).addClass("checked");
-}
+$('#member .arrow .right').on('click',rightSlide);
 
 function rightSlide() {
 
+  clickNumber++;
+  if(clickNumber > 4){
+    clickNumber = 0;
+  }
+
+  $('.memberBox').removeClass('num0 num1 num2 num3 num4');
+
+  $('.memberBox').eq(clickNumber-5).addClass('num0');
+  $('.memberBox').eq(clickNumber-4).addClass('num1');
+  $('.memberBox').eq(clickNumber-3).addClass('num2');
+  $('.memberBox').eq(clickNumber-2).addClass('num3');
+  $('.memberBox').eq(clickNumber-1).addClass('num4');
+
+}
+
+$('#member .arrow .right').on('click',rightChange);
+
+function rightChange() {
+
   slideNumber++;
   if(slideNumber > 4){
     slideNumber = 0;
   }
 
-  // slide right
-
-  $('li .memberBox').eq(slideNumber).replaceWith('li .memberBox').eq(slideNumber + 1);
-
-
-}
-
-function removeLeft() {
-  
-    // remove left
-
-    $('.memberList').remove('.memberBox').eq(slideNumber + 1);
+  $(".memberBox").eq(slideNumber -4).removeClass("checked");
+  $(".memberBox").eq(slideNumber -3).addClass("checked");
+  $(".dot span").removeClass("checked");
+  $(".dot span").eq(slideNumber).addClass("checked");
 
 }
+
