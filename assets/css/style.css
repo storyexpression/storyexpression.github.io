@@ -635,6 +635,7 @@ footer #copyright {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  transition: 1s;
 }
 
 #member main .container .memberList .memberBox {
@@ -729,6 +730,26 @@ footer #copyright {
   color: #444;
   font-size: 0.4rem;
   line-height: 1.4;
+}
+
+#member main .container .memberList .num0 {
+  order: 1;
+}
+
+#member main .container .memberList .num1 {
+  order: 2;
+}
+
+#member main .container .memberList .num2 {
+  order: 3;
+}
+
+#member main .container .memberList .num3 {
+  order: 4;
+}
+
+#member main .container .memberList .num4 {
+  order: 5;
 }
 
 @media screen and (max-width: 767px) {
