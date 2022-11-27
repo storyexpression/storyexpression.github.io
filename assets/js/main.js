@@ -76,11 +76,11 @@ function leftSlide() {
 
   $('.memberBox').removeClass('num0 num1 num2 num3 num4');
 
-  $('.memberBox').eq(clickNumber-1).addClass('num0');
-  $('.memberBox').eq(clickNumber-2).addClass('num1');
+  $('.memberBox').eq(clickNumber).addClass('num0');
+  $('.memberBox').eq(clickNumber-4).addClass('num1');
   $('.memberBox').eq(clickNumber-3).addClass('num2');
-  $('.memberBox').eq(clickNumber-4).addClass('num3');
-  $('.memberBox').eq(clickNumber-5).addClass('num4');
+  $('.memberBox').eq(clickNumber-2).addClass('num3');
+  $('.memberBox').eq(clickNumber-1).addClass('num4');
 
 }
 
