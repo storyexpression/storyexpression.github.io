@@ -421,6 +421,10 @@ footer #copyright {
   margin: 2rem 0;
 }
 
+#charaDesign main .container .charaBox .detail a:hover {
+  opacity: 1;
+}
+
 #charaDesign main .container .charaBox .detail .btn {
   display: flex;
   align-items: center;
@@ -429,10 +433,15 @@ footer #copyright {
   padding-right: 1rem;
   width: 100%;
   height: 4.8rem;
-  border: 1px solid #271D02;
   border-radius: 1.4rem;
   font-size: 1.4rem;
   background: #969696;
+  transition: 1s;
+}
+
+#charaDesign main .container .charaBox .detail .btn:hover {
+  background: #271D02;
+  color: #fff;
 }
 
 @media screen and (max-width: 767px) {
