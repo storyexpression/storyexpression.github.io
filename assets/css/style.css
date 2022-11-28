@@ -706,6 +706,7 @@ footer #copyright {
   border-radius: 3rem;
   background: #fff;
   margin: 0 auto;
+  transition: .8s ease-in-out;
 }
 
 #member main .container .memberList .memberBox .img img {
@@ -719,6 +720,7 @@ footer #copyright {
   background: #fff;
   margin: 0 auto;
   border-radius: 1.8rem;
+  transition: .8s ease-in-out;
 }
 
 #member main .container .memberList .memberBox .detail .memberDetail {
@@ -817,7 +819,7 @@ footer #copyright {
 #member footer {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 1.5rem;
   width: 100%;
 }
 
@@ -825,6 +827,8 @@ footer #copyright {
   position: absolute;
   right: 5%;
   bottom: 0;
+  display: block;
+  height: auto;
 }
 
 #load {
