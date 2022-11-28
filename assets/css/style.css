@@ -431,7 +431,7 @@ footer #copyright {
   height: 4.8rem;
   border: 1px solid #271D02;
   border-radius: 1.4rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background: #969696;
 }
 
@@ -638,6 +638,12 @@ footer #copyright {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+  #member main .container .memberList {
+    width: 100%;
+  }
+}
+
 #member main .container .memberList .memberBox {
   width: 21.9rem;
   height: 26.9rem;
@@ -743,8 +749,20 @@ footer #copyright {
   left: 0;
 }
 
+@media screen and (max-width: 767px) {
+  #member main .container .memberList .num0 {
+    display: none;
+  }
+}
+
 #member main .container .memberList .num1 {
   left: 23.9rem;
+}
+
+@media screen and (max-width: 767px) {
+  #member main .container .memberList .num1 {
+    left: 0;
+  }
 }
 
 #member main .container .memberList .num2 {
@@ -756,8 +774,20 @@ footer #copyright {
   right: 23.9rem;
 }
 
+@media screen and (max-width: 767px) {
+  #member main .container .memberList .num3 {
+    right: 0;
+  }
+}
+
 #member main .container .memberList .num4 {
   right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  #member main .container .memberList .num4 {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
