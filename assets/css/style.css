@@ -631,10 +631,7 @@ footer #copyright {
 }
 
 #member main .container .memberList {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  height: 55.2rem;
   transition: 1s;
   position: relative;
   width: 140rem;
@@ -655,7 +652,7 @@ footer #copyright {
   transition: .8s ease-in-out;
   position: absolute;
   top: 50%;
-  transform: translateY(50%);
+  transform: translateY(-50%);
 }
 
 #member main .container .memberList .memberBox:hover {
@@ -711,6 +708,7 @@ footer #copyright {
 
 #member main .container .memberList .memberBox .img img {
   width: 100%;
+  border-radius: 3rem;
 }
 
 #member main .container .memberList .memberBox .detail {
@@ -731,12 +729,14 @@ footer #copyright {
   color: #271D02;
   font-size: 1.2rem;
   margin-bottom: 0.4rem;
+  transition: .8s ease-in-out;
 }
 
 #member main .container .memberList .memberBox .detail .memberDetail p {
   color: #444;
   font-size: 0.4rem;
   line-height: 1.4;
+  transition: .8s ease-in-out;
 }
 
 #member main .container .memberList .num0 {
@@ -749,7 +749,7 @@ footer #copyright {
 
 #member main .container .memberList .num2 {
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 #member main .container .memberList .num3 {
