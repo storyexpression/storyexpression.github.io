@@ -64,6 +64,17 @@ function pageUp(){
 let slideNumber = 0;
 let clickNumber = 0;
 
+$(window).on('load',sliderSet);
+
+function sliderSet() {
+  $('.memberBox').eq(0).addClass('num0');
+  $('.memberBox').eq(1).addClass('num1');
+  $('.memberBox').eq(2).addClass('num2 checked');
+  $('.memberBox').eq(3).addClass('num3');
+  $('.memberBox').eq(4).addClass('num4');
+
+}
+
 // arrow left
 $('#member .arrow .left').on('click',leftSlide);
 
@@ -136,4 +147,3 @@ function rightChange() {
   $(".dot span").eq(slideNumber).addClass("checked");
 
 }
-
