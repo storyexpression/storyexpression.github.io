@@ -652,6 +652,56 @@ footer #copyright {
   transform: translateY(-50%);
 }
 
+#member main .container .memberList .memberBox .img {
+  width: 20.1rem;
+  height: 15.6rem;
+  border: 1px solid #707070;
+  border-radius: 3rem;
+  background: #fff;
+  margin: 0 auto;
+  transition: .5s ease-in-out;
+}
+
+#member main .container .memberList .memberBox .img img {
+  width: 100%;
+  border-radius: 3rem;
+  visibility: hidden;
+}
+
+#member main .container .memberList .memberBox .detail {
+  border: 1px solid #271D02;
+  width: 20.1rem;
+  height: 8.3rem;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 1.8rem;
+  transition: .5s ease-in-out;
+}
+
+#member main .container .memberList .memberBox .detail .memberDetail {
+  margin: 0.8rem 1.1rem;
+}
+
+@media screen and (max-width: 1280px) {
+  #member main .container .memberList .memberBox .detail .memberDetail {
+    margin: 0.4rem 0.6rem;
+  }
+}
+
+#member main .container .memberList .memberBox .detail .memberDetail h3 {
+  color: #271D02;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+  transition: .5s ease-in-out;
+}
+
+#member main .container .memberList .memberBox .detail .memberDetail p {
+  color: #444;
+  font-size: 0.4rem;
+  line-height: 1.4;
+  transition: .5s ease-in-out;
+}
+
 #member main .container .memberList .memberBox:hover {
   opacity: 0.5;
 }
@@ -693,57 +743,14 @@ footer #copyright {
   line-height: 2;
 }
 
-#member main .container .memberList .memberBox .img {
-  width: 20.1rem;
-  height: 15.6rem;
-  border: 1px solid #707070;
-  border-radius: 3rem;
-  background: #fff;
-  margin: 0 auto;
-  transition: .5s ease-in-out;
-}
-
-#member main .container .memberList .memberBox .img img {
-  width: 100%;
-  border-radius: 3rem;
-  visibility: hidden;
-}
-
-#member main .container .memberList .memberBox .detail {
-  border: 1px solid #271D02;
-  width: 20.1rem;
-  height: 8.3rem;
-  background: #fff;
-  margin: 0 auto;
-  border-radius: 1.8rem;
-  transition: .5s ease-in-out;
-}
-
-#member main .container .memberList .memberBox .detail .memberDetail {
-  margin: 0.8rem 1.1rem;
-}
-
-#member main .container .memberList .memberBox .detail .memberDetail h3 {
-  color: #271D02;
-  font-size: 0.8rem;
-  margin-bottom: 0.4rem;
-  transition: .5s ease-in-out;
-}
-
-#member main .container .memberList .memberBox .detail .memberDetail p {
-  color: #444;
-  font-size: 0.4rem;
-  line-height: 1.4;
-  transition: .5s ease-in-out;
-}
-
 #member main .container .memberList .num0 {
   left: 0;
 }
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num0 {
-    display: none;
+    left: 2%;
+    transform: translateY(-50%) scale(0.7);
   }
 }
 
@@ -753,14 +760,22 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num1 {
-    left: 0;
-    transform: translateY(-50%) scale(0.7);
+    left: 10%;
+    transform: translateY(-50%) scale(0.8);
+    z-index: 2;
+    opacity: 1;
   }
 }
 
 #member main .container .memberList .num2 {
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.7);
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 767px) {
+  #member main .container .memberList .num2 {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }
 
 #member main .container .memberList .num3 {
@@ -769,8 +784,10 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num3 {
-    right: 0;
-    transform: translateY(-50%) scale(0.7);
+    right: 10%;
+    transform: translateY(-50%) scale(0.8);
+    z-index: 2;
+    opacity: 1;
   }
 }
 
@@ -780,7 +797,8 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num4 {
-    display: none;
+    right: 2%;
+    transform: translateY(-50%) scale(0.7);
   }
 }
 
