@@ -557,7 +557,7 @@ footer #copyright {
 }
 
 #member main {
-  margin: 0 8.4rem;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -619,14 +619,8 @@ footer #copyright {
   height: 55.2rem;
   transition: 1s;
   position: relative;
-  width: 140rem;
+  width: 132.4rem;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 1280px) {
-  #member main .container .memberList {
-    width: 100rem;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -649,7 +643,7 @@ footer #copyright {
   transition: .5s ease-out;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(0.9);
 }
 
 #member main .container .memberList .memberBox .img {
@@ -753,7 +747,7 @@ footer #copyright {
 }
 
 #member main .container .memberList .num1 {
-  left: 23.9rem;
+  left: 21.5rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -777,7 +771,7 @@ footer #copyright {
 }
 
 #member main .container .memberList .num3 {
-  right: 23.9rem;
+  right: 21.5rem;
 }
 
 @media screen and (max-width: 767px) {
