@@ -636,8 +636,8 @@ footer #copyright {
 }
 
 #member main .container .memberList .memberBox {
-  width: 21.9rem;
-  height: 26.9rem;
+  width: 22.2rem;
+  height: 27.6rem;
   background: #CACACA;
   display: flex;
   flex-direction: column;
@@ -646,20 +646,20 @@ footer #copyright {
   justify-content: center;
   opacity: 0.27;
   cursor: pointer;
-  transition: .5s ease-in-out;
+  transition: .5s ease-out;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
 #member main .container .memberList .memberBox .img {
-  width: 20.1rem;
-  height: 15.6rem;
+  width: 20.4rem;
+  height: 15.7rem;
   border: 1px solid #707070;
   border-radius: 3rem;
   background: #fff;
   margin: 0 auto;
-  transition: .5s ease-in-out;
+  transition: .5s ease-out;
 }
 
 #member main .container .memberList .memberBox .img img {
@@ -669,16 +669,17 @@ footer #copyright {
 
 #member main .container .memberList .memberBox .detail {
   border: 1px solid #271D02;
-  width: 20.1rem;
-  height: 8.3rem;
+  width: 20.4rem;
+  height: 8.4rem;
   background: #fff;
   margin: 0 auto;
   border-radius: 1.8rem;
-  transition: .5s ease-in-out;
+  transition: .5s ease-out;
 }
 
 #member main .container .memberList .memberBox .detail .memberDetail {
   margin: 0.8rem 1.1rem;
+  transition: .5s ease-out;
 }
 
 @media screen and (max-width: 1280px) {
@@ -691,14 +692,14 @@ footer #copyright {
   color: #271D02;
   font-size: 0.8rem;
   margin-bottom: 0.4rem;
-  transition: .5s ease-in-out;
+  transition: .5s ease-out;
 }
 
 #member main .container .memberList .memberBox .detail .memberDetail p {
   color: #444;
   font-size: 0.4rem;
   line-height: 1.4;
-  transition: .5s ease-in-out;
+  transition: .5s ease-out;
 }
 
 #member main .container .memberList .memberBox:hover {
@@ -718,14 +719,12 @@ footer #copyright {
 #member main .container .memberList .memberBox.checked .img {
   width: 40.8rem;
   height: 31.4rem;
-  border-radius: 3rem;
 }
 
 #member main .container .memberList .memberBox.checked .detail {
   border: 1px solid #271D02;
   width: 40.8rem;
   height: 16.8rem;
-  border-radius: 1.8rem;
 }
 
 #member main .container .memberList .memberBox.checked .detail .memberDetail {
