@@ -861,12 +861,29 @@ footer #copyright {
   width: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  #member footer {
+    position: static;
+    width: auto;
+  }
+}
+
 #member footer #copyright {
   position: absolute;
   right: 5%;
   bottom: 0;
   display: block;
   height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  #member footer #copyright {
+    position: static;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 #load {
