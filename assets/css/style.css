@@ -665,7 +665,6 @@ footer #copyright {
 #member main .container .memberList .memberBox .img img {
   width: 100%;
   border-radius: 3rem;
-  visibility: hidden;
 }
 
 #member main .container .memberList .memberBox .detail {
