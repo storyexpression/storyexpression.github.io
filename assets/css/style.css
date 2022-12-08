@@ -218,7 +218,7 @@ header .headerWrap nav ul a {
     top: 0.7rem;
   }
   header .headerWrap #toggle span.line#line1.line1 {
-    transform: rotate(-405deg);
+    transform: rotate(-45deg);
     top: 2.7rem;
   }
   header .headerWrap #toggle span.line#line2 {
@@ -232,7 +232,7 @@ header .headerWrap nav ul a {
     bottom: 0.4rem;
   }
   header .headerWrap #toggle span.line#line3.line3 {
-    transform: rotate(405deg);
+    transform: rotate(45deg);
     bottom: 1.8rem;
   }
 }
@@ -469,12 +469,18 @@ footer #copyright {
   right: 0;
 }
 
-#comicPage .turnBtn a {
-  visibility: hidden;
-  opacity: 0;
+#comicPage .turnBtn .btn {
+  width: 6.4rem;
+  height: 6.4rem;
+  cursor: pointer;
+  transition: 1s;
 }
 
-#comicPage .turnBtn svg {
+#comicPage .turnBtn .btn:hover {
+  opacity: 0.5;
+}
+
+#comicPage .turnBtn .btn svg {
   fill: #fff;
   width: 6.4rem;
   height: 6.4rem;
@@ -503,22 +509,23 @@ footer #copyright {
   }
 }
 
-#comicPage main #container .left, #comicPage main #container .right {
+#comicPage main #container ul {
   height: 100%;
-  aspect-ratio: 1 / 1.4;
+  aspect-ratio: 2 / 1.4;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 767px) {
-  #comicPage main #container .left, #comicPage main #container .right {
+  #comicPage main #container ul {
     height: auto;
   }
 }
 
-#comicPage main #container .left .comic, #comicPage main #container .right .comic {
+#comicPage main #container ul .comic {
   object-fit: cover;
   width: calc(100% - 1.2rem);
   aspect-ratio: 1 / 1.4;
@@ -621,6 +628,7 @@ footer #copyright {
   position: relative;
   width: 132.4rem;
   margin: 0 auto;
+  transition: .5s ease-out;
 }
 
 @media screen and (max-width: 1280px) {
@@ -690,9 +698,10 @@ footer #copyright {
 
 #member main .container .memberList .memberBox .detail .memberDetail h3 {
   color: #271D02;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   margin-bottom: 0.4rem;
   transition: .5s ease-out;
+  line-height: 1;
 }
 
 @media screen and (max-width: 1280px) {
@@ -704,7 +713,7 @@ footer #copyright {
 
 #member main .container .memberList .memberBox .detail .memberDetail p {
   color: #444;
-  font-size: 0.4rem;
+  font-size: 0.8rem;
   line-height: 1.4;
   transition: .5s ease-out;
 }
@@ -780,9 +789,8 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num1 {
-    left: 10%;
+    left: 6%;
     z-index: 2;
-    opacity: 1;
   }
 }
 
@@ -809,9 +817,8 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num3 {
-    right: 10%;
+    right: 6%;
     z-index: 2;
-    opacity: 1;
   }
 }
 
