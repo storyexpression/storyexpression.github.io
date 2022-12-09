@@ -857,7 +857,7 @@ footer #copyright {
   position: relative;
   width: 132.4rem;
   margin: 0 auto;
-  transition: .5s linear;
+  transition: .8s ease-out;
 }
 
 @media screen and (max-width: 1280px) {
@@ -883,7 +883,7 @@ footer #copyright {
   justify-content: center;
   filter: brightness(45%) saturate(90%);
   cursor: pointer;
-  transition: .5s linear;
+  transition: .8s ease-out;
   position: absolute;
   top: 50%;
   transform: translateY(-50%) scale(0.9);
@@ -896,7 +896,7 @@ footer #copyright {
   border-radius: 3rem;
   background: #fff;
   margin: 0 auto;
-  transition: .5s linear;
+  transition: .8s ease-out;
 }
 
 #member main .container .memberList .memberBox .img img {
@@ -911,12 +911,12 @@ footer #copyright {
   background: #fff;
   margin: 0 auto;
   border-radius: 1.8rem;
-  transition: .5s linear;
+  transition: .8s ease-out;
 }
 
 #member main .container .memberList .memberBox .detail .memberDetail {
   margin: 0.8rem 1.1rem;
-  transition: .5s linear;
+  transition: .8s ease-out;
 }
 
 @media screen and (max-width: 1280px) {
@@ -929,7 +929,7 @@ footer #copyright {
   color: #271D02;
   font-size: 1.4rem;
   margin-bottom: 0.4rem;
-  transition: .5s linear;
+  transition: .8s ease-out;
   line-height: 1;
 }
 
@@ -944,7 +944,7 @@ footer #copyright {
   color: #444;
   font-size: 0.8rem;
   line-height: 1.4;
-  transition: .5s linear;
+  transition: .8s ease-out;
 }
 
 @media screen and (max-width: 1280px) {
@@ -963,6 +963,19 @@ footer #copyright {
   z-index: 5;
   cursor: auto;
   filter: brightness(100%) saturate(100%);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media screen and (max-width: 1280px) {
+  #member main .container .memberList .memberBox.checked {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #member main .container .memberList .memberBox.checked {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }
 
 #member main .container .memberList .memberBox.checked .img {
@@ -1028,19 +1041,7 @@ footer #copyright {
 
 #member main .container .memberList .num2 {
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-@media screen and (max-width: 1280px) {
-  #member main .container .memberList .num2 {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #member main .container .memberList .num2 {
-    transform: translate(-50%, -50%) scale(0.8);
-  }
+  right: 25%;
 }
 
 #member main .container .memberList .num3 {
@@ -1056,7 +1057,7 @@ footer #copyright {
 }
 
 #member main .container .memberList .num4 {
-  right: 0;
+  right: 0%;
   filter: brightness(25%) saturate(90%);
 }
 
