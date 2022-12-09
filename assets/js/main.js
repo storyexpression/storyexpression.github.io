@@ -63,6 +63,7 @@ function pageUp(){
 
 let slideNumber = 0;
 let clickNumber = 0;
+let memBox = $('.memberBox');
 
 $(window).on('load',sliderSet);
 
@@ -80,31 +81,19 @@ $('#member .arrow .left').on('click',leftSlide);
 
 function leftSlide() {
 
-  clickNumber--;
-  if(clickNumber < 0){
-    clickNumber = 4;
-  }
-
-  $('.memberBox').removeClass('num0 num1 num2 num3 num4');
-
-  $('.memberBox').eq(clickNumber).addClass('num0');
-  $('.memberBox').eq(clickNumber-4).addClass('num1');
-  $('.memberBox').eq(clickNumber-3).addClass('num2');
-  $('.memberBox').eq(clickNumber-2).addClass('num3');
-  $('.memberBox').eq(clickNumber-1).addClass('num4');
-
-}
-
-$('#member .arrow .left').on('click',leftChange);
-
-function leftChange() {
   slideNumber--;
   if(slideNumber < 0){
     slideNumber = 4;
   }
 
-  $(".memberBox").eq(slideNumber - 2).removeClass("checked");
-  $(".memberBox").eq(slideNumber - 3).addClass("checked");
+  memBox.removeClass('num0 num1 num2 num3 num4');
+
+  memBox.eq(slideNumber).addClass('num0');
+  memBox.eq(slideNumber - 4).addClass('num1');
+  memBox.eq(slideNumber - 3).addClass('num2 checked');
+  memBox.eq(slideNumber - 2).removeClass("checked");
+  memBox.eq(slideNumber - 2).addClass('num3');
+  memBox.eq(slideNumber - 1).addClass('num4');
 
   $(".dot span").removeClass("checked");
   $(".dot span").eq(slideNumber).addClass("checked");
@@ -117,22 +106,26 @@ $('#member .arrow .right').on('click',rightSlide);
 
 function rightSlide() {
 
-  clickNumber++;
-  if(clickNumber > 4){
-    clickNumber = 0;
+  slideNumber++;
+  if(slideNumber > 4){
+    slideNumber = 0;
   }
 
-  $('.memberBox').removeClass('num0 num1 num2 num3 num4');
+  memBox.removeClass('num0 num1 num2 num3 num4');
 
-  $('.memberBox').eq(clickNumber-5).addClass('num0');
-  $('.memberBox').eq(clickNumber-4).addClass('num1');
-  $('.memberBox').eq(clickNumber-3).addClass('num2');
-  $('.memberBox').eq(clickNumber-2).addClass('num3');
-  $('.memberBox').eq(clickNumber-1).addClass('num4');
+  memBox.eq(slideNumber - 5).addClass('num0');
+  memBox.eq(slideNumber - 4).addClass('num1');
+  memBox.eq(slideNumber - 3).addClass('num2 checked');
+  memBox.eq(slideNumber - 4).removeClass("checked");
+  memBox.eq(slideNumber - 2).addClass('num3');
+  memBox.eq(slideNumber - 1).addClass('num4');
+
+  $(".dot span").removeClass("checked");
+  $(".dot span").eq(slideNumber).addClass("checked");
 
 }
 
-$('#member .arrow .right').on('click',rightChange);
+//$('#member .arrow .right').on('click',rightChange);
 
 function rightChange() {
 
@@ -141,9 +134,13 @@ function rightChange() {
     slideNumber = 0;
   }
 
-  $(".memberBox").eq(slideNumber -4).removeClass("checked");
-  $(".memberBox").eq(slideNumber -3).addClass("checked");
+  memBox.eq(slideNumber -4).removeClass("checked");
+  memBox.eq(slideNumber -3).addClass("checked");
   $(".dot span").removeClass("checked");
   $(".dot span").eq(slideNumber).addClass("checked");
 
 }
+
+// comicPagesSlider
+
+let pageNumber = 0;
