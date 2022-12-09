@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media screen and (min-width: 1281px) {
   .__pc {
     display: block;
@@ -563,6 +564,233 @@ footer #copyright {
   }
 }
 
+#memberTest main {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  #memberTest main {
+    padding: 10rem 0 5rem 0;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0;
+  }
+}
+
+#memberTest main .swiper {
+  margin-bottom: 6.8rem;
+  position: relative;
+  height: 55.2rem;
+}
+
+#memberTest main .swiper .arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72.4rem;
+  z-index: 8;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  #memberTest main .swiper .arrow {
+    width: 100%;
+  }
+}
+
+#memberTest main .swiper .arrow .left, #memberTest main .swiper .arrow .right {
+  position: absolute;
+  transition: 1s;
+}
+
+#memberTest main .swiper .arrow .left:hover, #memberTest main .swiper .arrow .right:hover {
+  opacity: 0.5;
+}
+
+#memberTest main .swiper .arrow .left svg, #memberTest main .swiper .arrow .right svg {
+  width: 7.6rem;
+  height: 7.6rem;
+  fill: #fff;
+}
+
+#memberTest main .swiper .arrow .left {
+  left: 0;
+}
+
+#memberTest main .swiper .arrow .right {
+  right: 0;
+}
+
+#memberTest main .swiper .memberList {
+  height: 55.2rem;
+  transition: 1s;
+  position: relative;
+  width: 132.4rem;
+  margin: 0 auto;
+  transition: .5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1280px) {
+  #memberTest main .swiper .memberList {
+    width: 100rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #memberTest main .swiper .memberList {
+    width: 100%;
+  }
+}
+
+#memberTest main .swiper .memberList .memberBox {
+  width: 44.4rem;
+  height: 55.2rem;
+  gap: 2.8rem;
+  border-radius: 1.4rem;
+  opacity: 1;
+  z-index: 5;
+  cursor: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #CACACA;
+}
+
+#memberTest main .swiper .memberList .memberBox .img {
+  width: 40.8rem;
+  height: 31.4rem;
+  border: 1px solid #707070;
+  border-radius: 3rem;
+  background: #fff;
+  margin: 0 auto;
+  transition: .5s ease-in-out;
+}
+
+#memberTest main .swiper .memberList .memberBox .img img {
+  width: 100%;
+  border-radius: 3rem;
+}
+
+#memberTest main .swiper .memberList .memberBox .detail {
+  border: 1px solid #271D02;
+  width: 40.8rem;
+  height: 16.8rem;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 1.8rem;
+  transition: .5s ease-in-out;
+}
+
+#memberTest main .swiper .memberList .memberBox .detail .memberDetail {
+  margin: 1.6rem 2.2rem;
+  transition: .5s ease-in-out;
+}
+
+#memberTest main .swiper .memberList .memberBox .detail .memberDetail h3 {
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+  transition: .5s ease-in-out;
+  line-height: 1;
+  color: #271D02;
+}
+
+@media screen and (max-width: 1280px) {
+  #memberTest main .swiper .memberList .memberBox .detail .memberDetail h3 {
+    transform: scale(1);
+  }
+}
+
+#memberTest main .swiper .memberList .memberBox .detail .memberDetail p {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #444;
+  transition: .5s ease-in-out;
+}
+
+@media screen and (max-width: 1280px) {
+  #memberTest main .swiper .memberList .memberBox .detail .memberDetail p {
+    transform: scale(1);
+  }
+}
+
+#memberTest main .swiper .memberList .swiper--wrapper {
+  /* wrapperのサイズを調整 */
+  width: 44.4rem;
+  height: 100%;
+}
+
+#memberTest main .swiper .memberList .swiper-slide {
+  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+  color: #ffffff;
+  width: 44.4rem;
+  height: 100%;
+}
+
+#memberTest main .dot {
+  display: flex;
+  justify-content: center;
+  gap: 2.8rem;
+}
+
+#memberTest main .dot span {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.27;
+  transition: 1s;
+}
+
+#memberTest main .dot span:hover {
+  opacity: 1;
+}
+
+#memberTest main .dot span.checked {
+  opacity: 1;
+}
+
+#memberTest footer {
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  #memberTest footer {
+    position: static;
+    width: auto;
+  }
+}
+
+#memberTest footer #copyright {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  display: block;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  #memberTest footer #copyright {
+    position: static;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#member {
+  overflow-x: hidden;
+}
+
 #member main {
   margin: 0 auto;
 }
@@ -595,7 +823,8 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .arrow {
-    width: 100%;
+    width: 67.6rem;
+    max-width: 100%;
   }
 }
 
@@ -628,7 +857,7 @@ footer #copyright {
   position: relative;
   width: 132.4rem;
   margin: 0 auto;
-  transition: .5s ease-out;
+  transition: .5s linear;
 }
 
 @media screen and (max-width: 1280px) {
@@ -654,7 +883,7 @@ footer #copyright {
   justify-content: center;
   filter: brightness(45%) saturate(90%);
   cursor: pointer;
-  transition: .5s ease-out;
+  transition: .5s linear;
   position: absolute;
   top: 50%;
   transform: translateY(-50%) scale(0.9);
@@ -667,7 +896,7 @@ footer #copyright {
   border-radius: 3rem;
   background: #fff;
   margin: 0 auto;
-  transition: .5s ease-out;
+  transition: .5s linear;
 }
 
 #member main .container .memberList .memberBox .img img {
@@ -682,12 +911,12 @@ footer #copyright {
   background: #fff;
   margin: 0 auto;
   border-radius: 1.8rem;
-  transition: .5s ease-out;
+  transition: .5s linear;
 }
 
 #member main .container .memberList .memberBox .detail .memberDetail {
   margin: 0.8rem 1.1rem;
-  transition: .5s ease-out;
+  transition: .5s linear;
 }
 
 @media screen and (max-width: 1280px) {
@@ -700,7 +929,7 @@ footer #copyright {
   color: #271D02;
   font-size: 1.4rem;
   margin-bottom: 0.4rem;
-  transition: .5s ease-out;
+  transition: .5s linear;
   line-height: 1;
 }
 
@@ -715,7 +944,7 @@ footer #copyright {
   color: #444;
   font-size: 0.8rem;
   line-height: 1.4;
-  transition: .5s ease-out;
+  transition: .5s linear;
 }
 
 @media screen and (max-width: 1280px) {
@@ -726,6 +955,7 @@ footer #copyright {
 
 #member main .container .memberList .memberBox.checked {
   width: 44.4rem;
+  max-width: 100%;
   height: 55.2rem;
   gap: 2.8rem;
   border-radius: 1.4rem;
@@ -779,7 +1009,8 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num0 {
-    left: 2%;
+    left: 0;
+    transform: translate(-100%, -50%) scale(0.8);
   }
 }
 
@@ -789,8 +1020,9 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num1 {
-    left: 6%;
+    left: 0;
     z-index: 2;
+    transform: translate(-100%, -50%) scale(0.8);
   }
 }
 
@@ -817,8 +1049,9 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num3 {
-    right: 6%;
+    right: 0;
     z-index: 2;
+    transform: translate(100%, -50%) scale(0.8);
   }
 }
 
@@ -829,7 +1062,8 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num4 {
-    right: 2%;
+    right: 0;
+    transform: translate(100%, -50%) scale(0.8);
   }
 }
 
