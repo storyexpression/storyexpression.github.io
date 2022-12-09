@@ -125,22 +125,6 @@ function rightSlide() {
 
 }
 
-//$('#member .arrow .right').on('click',rightChange);
-
-function rightChange() {
-
-  slideNumber++;
-  if(slideNumber > 4){
-    slideNumber = 0;
-  }
-
-  memBox.eq(slideNumber -4).removeClass("checked");
-  memBox.eq(slideNumber -3).addClass("checked");
-  $(".dot span").removeClass("checked");
-  $(".dot span").eq(slideNumber).addClass("checked");
-
-}
-
 // comicPagesSlider
 
 let pageNumber = 0;
