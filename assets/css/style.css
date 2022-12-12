@@ -937,6 +937,12 @@ footer #copyright {
           */
 }
 
+@media screen and (max-width: 767px) {
+  #member main .container .memberList .memberBox {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
 #member main .container .memberList .memberBox .img {
   border: 1px solid #707070;
   border-radius: 3rem;
