@@ -128,3 +128,5 @@ function rightSlide() {
 // comicPagesSlider
 
 let pageNumber = 0;
+
+document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
