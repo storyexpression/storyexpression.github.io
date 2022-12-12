@@ -1025,6 +1025,7 @@ footer #copyright {
   #member main .container .memberList .num0 {
     left: 50%;
     right: 25%;
+    top: 50%;
     transform: translate(12%, -50%) scale(0.8);
   }
 }
@@ -1037,6 +1038,7 @@ footer #copyright {
   #member main .container .memberList .num1 {
     left: 50%;
     right: 25%;
+    top: 50%;
     z-index: 2;
     transform: translate(0, -50%) scale(0.9);
   }
@@ -1045,6 +1047,7 @@ footer #copyright {
 #member main .container .memberList .num2 {
   left: 50%;
   right: 25%;
+  top: 50%;
 }
 
 #member main .container .memberList .num3 {
@@ -1055,6 +1058,7 @@ footer #copyright {
   #member main .container .memberList .num3 {
     left: 50%;
     right: 25%;
+    top: 50%;
     z-index: 2;
     transform: translate(-100%, -50%) scale(0.9);
   }
@@ -1069,6 +1073,7 @@ footer #copyright {
   #member main .container .memberList .num4 {
     left: 50%;
     right: 25%;
+    top: 50%;
     transform: translate(-112%, -50%) scale(0.8);
   }
 }
