@@ -873,31 +873,78 @@ footer #copyright {
 }
 
 #member main .container .memberList .memberBox {
-  width: 22.2rem;
-  height: 27.6rem;
   background: #CACACA;
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
-  border-radius: 1.4rem;
   justify-content: center;
-  filter: brightness(45%) saturate(90%);
   cursor: pointer;
   transition: all .8s ease-out;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%) scale(0.9);
+  transform: translate(-50%, -50%);
   transform-origin: 50% 50% 0;
+  width: 44.4rem;
+  max-width: 100%;
+  height: 55.2rem;
+  gap: 2.8rem;
+  border-radius: 1.4rem;
+  z-index: 1;
+  /*&.checked {
+            width: r(444);
+            max-width: 100%;
+            height: r(552);
+            gap: r(28);
+            border-radius: r(14);
+            opacity: 1;
+            z-index: 5;
+            cursor: auto;
+            filter: brightness(100%) saturate(100%);
+            top: 50%;
+            transform: translate(-50%,-50%) scale(1);
+            @include mq(note) {
+              transform: translate(-50%,-50%) scale(1);
+            }
+            @include mq(sp) {
+              transform: translate(-50%,-50%) scale(0.8);
+            }
+            .img {
+              width: r(408);
+              height: r(314);
+            }
+            .detail {
+              border: 1px solid $headColor;
+              width: r(408);
+              height: r(168);
+              .memberDetail {
+                margin: r(16) r(22);
+                h3 {
+                  font-size: r(28);
+                  margin-bottom: r(8);
+                  @include mq(note) {
+                    transform: scale(1);
+                  }
+                }
+                p {
+                  font-size: r(16);
+                  line-height: 2;
+                  @include mq(note) {
+                    transform: scale(1);
+                  }
+                }
+              }
+            }
+          }
+          */
 }
 
 #member main .container .memberList .memberBox .img {
-  width: 20.4rem;
-  height: 15.7rem;
   border: 1px solid #707070;
   border-radius: 3rem;
   background: #fff;
   margin: 0 auto;
   transition: all .8s ease-out;
+  width: 40.8rem;
+  height: 31.4rem;
 }
 
 #member main .container .memberList .memberBox .img img {
@@ -907,119 +954,39 @@ footer #copyright {
 
 #member main .container .memberList .memberBox .detail {
   border: 1px solid #271D02;
-  width: 20.4rem;
-  height: 8.4rem;
   background: #fff;
   margin: 0 auto;
   border-radius: 1.8rem;
   transition: all .8s ease-out;
+  width: 40.8rem;
+  height: 16.8rem;
 }
 
 #member main .container .memberList .memberBox .detail .memberDetail {
   margin: 0.8rem 1.1rem;
   transition: all .8s ease-out;
-}
-
-@media screen and (max-width: 1280px) {
-  #member main .container .memberList .memberBox .detail .memberDetail {
-    margin: 0.4rem 0.6rem;
-  }
+  margin: 1.6rem 2.2rem;
 }
 
 #member main .container .memberList .memberBox .detail .memberDetail h3 {
   color: #271D02;
-  font-size: 1.4rem;
-  margin-bottom: 0.4rem;
   transition: all .8s ease-out;
   line-height: 1;
-}
-
-@media screen and (max-width: 1280px) {
-  #member main .container .memberList .memberBox .detail .memberDetail h3 {
-    transform: scale(0.9);
-    margin-bottom: 0.2rem;
-  }
-}
-
-#member main .container .memberList .memberBox .detail .memberDetail p {
-  color: #444;
-  font-size: 0.8rem;
-  line-height: 1.4;
-  transition: all .8s ease-out;
-}
-
-@media screen and (max-width: 1280px) {
-  #member main .container .memberList .memberBox .detail .memberDetail p {
-    transform: scale(0.9);
-  }
-}
-
-#member main .container .memberList .memberBox.checked {
-  width: 44.4rem;
-  max-width: 100%;
-  height: 55.2rem;
-  gap: 2.8rem;
-  border-radius: 1.4rem;
-  opacity: 1;
-  z-index: 5;
-  cursor: auto;
-  filter: brightness(100%) saturate(100%);
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-@media screen and (max-width: 1280px) {
-  #member main .container .memberList .memberBox.checked {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #member main .container .memberList .memberBox.checked {
-    transform: translate(-50%, -50%) scale(0.8);
-  }
-}
-
-#member main .container .memberList .memberBox.checked .img {
-  width: 40.8rem;
-  height: 31.4rem;
-}
-
-#member main .container .memberList .memberBox.checked .detail {
-  border: 1px solid #271D02;
-  width: 40.8rem;
-  height: 16.8rem;
-}
-
-#member main .container .memberList .memberBox.checked .detail .memberDetail {
-  margin: 1.6rem 2.2rem;
-}
-
-#member main .container .memberList .memberBox.checked .detail .memberDetail h3 {
   font-size: 2.8rem;
   margin-bottom: 0.8rem;
 }
 
-@media screen and (max-width: 1280px) {
-  #member main .container .memberList .memberBox.checked .detail .memberDetail h3 {
-    transform: scale(1);
-  }
-}
-
-#member main .container .memberList .memberBox.checked .detail .memberDetail p {
+#member main .container .memberList .memberBox .detail .memberDetail p {
+  color: #444;
+  transition: all .8s ease-out;
   font-size: 1.6rem;
   line-height: 2;
-}
-
-@media screen and (max-width: 1280px) {
-  #member main .container .memberList .memberBox.checked .detail .memberDetail p {
-    transform: scale(1);
-  }
 }
 
 #member main .container .memberList .num0 {
   left: 0;
   filter: brightness(25%) saturate(90%);
+  transform: translateY(-50%) scale(0.4);
 }
 
 @media screen and (max-width: 767px) {
@@ -1027,12 +994,15 @@ footer #copyright {
     left: 50%;
     right: 25%;
     top: 50%;
-    transform: translate(12%, -50%) scale(0.8);
+    transform: translate(12%, -50%) scale(0.4);
   }
 }
 
 #member main .container .memberList .num1 {
   left: 21.5rem;
+  transform: translateY(-50%) scale(0.4);
+  filter: brightness(25%) saturate(90%);
+  z-index: 2;
 }
 
 @media screen and (max-width: 767px) {
@@ -1041,7 +1011,7 @@ footer #copyright {
     right: 25%;
     top: 50%;
     z-index: 2;
-    transform: translate(0, -50%) scale(0.9);
+    transform: translate(0, -50%) scale(0.5);
   }
 }
 
@@ -1049,10 +1019,14 @@ footer #copyright {
   left: 50%;
   right: 25%;
   top: 50%;
+  z-index: 5;
 }
 
 #member main .container .memberList .num3 {
   right: 21.5rem;
+  transform: translateY(-50%) scale(0.4);
+  filter: brightness(25%) saturate(90%);
+  z-index: 2;
 }
 
 @media screen and (max-width: 767px) {
@@ -1061,12 +1035,13 @@ footer #copyright {
     right: 25%;
     top: 50%;
     z-index: 2;
-    transform: translate(-100%, -50%) scale(0.9);
+    transform: translate(-100%, -50%) scale(0.5);
   }
 }
 
 #member main .container .memberList .num4 {
   right: 0;
+  transform: translateY(-50%) scale(0.4);
   filter: brightness(25%) saturate(90%);
 }
 
@@ -1075,7 +1050,7 @@ footer #copyright {
     left: 50%;
     right: 25%;
     top: 50%;
-    transform: translate(-112%, -50%) scale(0.8);
+    transform: translate(-112%, -50%) scale(0.4);
   }
 }
 
