@@ -1022,7 +1022,7 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num0 {
-    left: 0;
+    left: 50%;
     transform: translate(-100%, -50%) scale(0.8);
   }
 }
@@ -1033,7 +1033,7 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num1 {
-    left: 0;
+    left: 50%;
     z-index: 2;
     transform: translate(-100%, -50%) scale(0.8);
   }
@@ -1050,7 +1050,7 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num3 {
-    right: 0;
+    right: 25;
     z-index: 2;
     transform: translate(100%, -50%) scale(0.8);
   }
@@ -1063,8 +1063,8 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num4 {
-    right: 0;
-    transform: translate(100%, -50%) scale(0.8);
+    right: 25%;
+    transform: translate(150%, -50%) scale(0.8);
   }
 }
 
