@@ -70,7 +70,7 @@ $(window).on('load',sliderSet);
 function sliderSet() {
   $('.memberBox').eq(0).addClass('num0');
   $('.memberBox').eq(1).addClass('num1');
-  $('.memberBox').eq(2).addClass('num2 checked');
+  $('.memberBox').eq(2).addClass('num2');
   $('.memberBox').eq(3).addClass('num3');
   $('.memberBox').eq(4).addClass('num4');
 
@@ -90,8 +90,8 @@ function leftSlide() {
 
   memBox.eq(slideNumber).addClass('num0');
   memBox.eq(slideNumber - 4).addClass('num1');
-  memBox.eq(slideNumber - 3).addClass('num2 checked');
-  memBox.eq(slideNumber - 2).removeClass("checked");
+  memBox.eq(slideNumber - 3).addClass('num2');
+  //memBox.eq(slideNumber - 2).removeClass("checked");
   memBox.eq(slideNumber - 2).addClass('num3');
   memBox.eq(slideNumber - 1).addClass('num4');
 
@@ -115,8 +115,8 @@ function rightSlide() {
 
   memBox.eq(slideNumber - 5).addClass('num0');
   memBox.eq(slideNumber - 4).addClass('num1');
-  memBox.eq(slideNumber - 3).addClass('num2 checked');
-  memBox.eq(slideNumber - 4).removeClass("checked");
+  memBox.eq(slideNumber - 3).addClass('num2');
+  //memBox.eq(slideNumber - 4).removeClass("checked");
   memBox.eq(slideNumber - 2).addClass('num3');
   memBox.eq(slideNumber - 1).addClass('num4');
 
