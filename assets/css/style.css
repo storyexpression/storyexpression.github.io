@@ -887,6 +887,7 @@ footer #copyright {
   position: absolute;
   top: 50%;
   transform: translateY(-50%) scale(0.9);
+  transform-origin: 50% 50% 0;
 }
 
 #member main .container .memberList .memberBox .img {
