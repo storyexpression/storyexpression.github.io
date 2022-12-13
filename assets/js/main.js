@@ -1,3 +1,27 @@
+// iOSでoverflow:hidden;を適用するためのjs
+
+document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
+
+// 何かに使えるかも
+
+let screenHeight = window.innerHeight;
+let screenWidth = window.innerWidth;
+
+// load animation
+
+$('#load .loadImg h1').textPerspecAnimate();
+$('#load .loadImg p').textPerspecAnimate();
+$('#load .loadImg svg').transit({
+  opacity : 1,
+  dilay : 1000
+},1000);
+
+// loaded
+
+function pageUp(){
+  $('#load').addClass('loaded');
+};
+
 // header
 
 if($(window).width() > 768) {
@@ -9,7 +33,7 @@ if($(window).width() > 768) {
   });
 };
 
-// toggle
+// toggle menu
 
 $('#toggle').on('click',function(){
   $('#line1').toggleClass('line1');
@@ -41,23 +65,7 @@ $('.turnLeft'+','+'.turnRight').on('mouseleave',function(){
   $('.turnBtn a').css({'visibility':'hidden','opacity':'0'});
 });
 
-// 何かに使えるかも
 
-let screenHeight = window.innerHeight;
-let screenWidth = window.innerWidth;
-
-// load
-
-$('#load .loadImg h1').textPerspecAnimate();
-$('#load .loadImg p').textPerspecAnimate();
-$('#load .loadImg svg').transit({
-  opacity : 1,
-  dilay : 1000
-},1000);
-
-function pageUp(){
-  $('#load').addClass('loaded');
-};
 
 // memberSlider
 
@@ -129,4 +137,3 @@ function rightSlide() {
 
 let pageNumber = 0;
 
-document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
