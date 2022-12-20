@@ -137,3 +137,37 @@ function rightSlide() {
 
 let pageNumber = 0;
 
+let prevBtn = $('#comicPage .turnRight .btn');
+let nextBtn = $('#comicPage .turnLeft .btn');
+
+let leftComic = $('#comicPage .leftPage .comic');
+let rightComic = $('#comicPage .rightPage .comic');
+
+
+prevBtn.on('click',prevPage);
+
+function prevPage() {
+  pageNumber--;
+  if(pageNumber < 0){
+    false;
+  }
+  leftComic.eq(pageNumber - 1).removeClass('show');
+  rightComic.eq(pageNumber - 1).removeClass('show');
+  leftComic.eq(pageNumber).addClass('show');
+  rightComic.eq(pageNumber).addClass('show');
+
+}
+
+nextBtn.on('click',nextPage);
+
+function nextPage() {
+  pageNumber++;
+  if(pageNumber > 8){
+    false;
+  }
+
+  leftComic.eq(pageNumber - 1).removeClass('show');
+  rightComic.eq(pageNumber - 1).removeClass('show');
+  leftComic.eq(pageNumber).addClass('show');
+  rightComic.eq(pageNumber).addClass('show');
+}

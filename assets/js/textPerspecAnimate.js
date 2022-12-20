@@ -6,12 +6,12 @@
 
 $.fn.textPerspecAnimate = function(){
   // 文字列取得
-  let shopName = this.text();
+  let loadText = this.text();
   // HTMLから一時的に削除
   this.text('');
   // 一文字ずつspanにバラす
-  for(let i=0; i<shopName.length; i++){
-  this.append('<span>' + shopName.charAt(i) + '</span>');
+  for(let i=0; i<loadText.length; i++){
+  this.append('<span>' + loadText.charAt(i) + '</span>');
   }
   // this内のspanにcss適用
   this.find('span').each(function(){
