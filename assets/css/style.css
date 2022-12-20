@@ -474,6 +474,9 @@ footer #copyright {
   height: 6.4rem;
   cursor: pointer;
   transition: 1s;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 #comicPage .turnBtn .btn:hover {
@@ -484,6 +487,12 @@ footer #copyright {
   fill: #fff;
   width: 6.4rem;
   height: 6.4rem;
+}
+
+#comicPage .turnBtn .btn .btnName {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
 }
 
 #comicPage main #container {
@@ -587,6 +596,7 @@ footer #copyright {
   visibility: hidden;
   opacity: 0;
   position: absolute;
+  transition: 1s;
 }
 
 #comicPage main #container .comic.show {
