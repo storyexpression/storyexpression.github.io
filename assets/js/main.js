@@ -149,12 +149,14 @@ prevBtn.on('click',prevPage);
 function prevPage() {
   pageNumber--;
   if(pageNumber < 0){
-    false;
+    return;
   }
-  leftComic.eq(pageNumber - 1).removeClass('show');
-  rightComic.eq(pageNumber - 1).removeClass('show');
+  leftComic.eq(pageNumber + 1).removeClass('show');
+  rightComic.eq(pageNumber + 1).removeClass('show');
   leftComic.eq(pageNumber).addClass('show');
   rightComic.eq(pageNumber).addClass('show');
+
+  console.log(pageNumber);
 
 }
 
@@ -162,12 +164,14 @@ nextBtn.on('click',nextPage);
 
 function nextPage() {
   pageNumber++;
-  if(pageNumber > 8){
-    false;
+  if(pageNumber > 3){
+    return;
   }
 
   leftComic.eq(pageNumber - 1).removeClass('show');
   rightComic.eq(pageNumber - 1).removeClass('show');
   leftComic.eq(pageNumber).addClass('show');
   rightComic.eq(pageNumber).addClass('show');
+
+  console.log(pageNumber);
 }
