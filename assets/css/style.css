@@ -493,6 +493,42 @@ footer #copyright {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 80%;
+  /*ul {
+        height: 100%;
+        width: auto;
+        aspect-ratio: 2 / 1.4;
+        background: #fff;
+        //border-radius: r(24);
+        @include flexCentering;
+        flex-direction: row-reverse;
+        position: relative;
+        &::after {
+          content: '';
+          border-left: 1px solid $headColor;
+          height: 100%;
+        }
+        @include mq(sp) {
+          height: auto;
+        }
+        .comic {
+          object-fit: cover;
+          width: calc(50% - 1.2rem);
+          aspect-ratio: 1 / 1.4;
+          @include flexCentering;
+          position: absolute;
+          &.leftPage {
+            left: r(6);
+            z-index: 5;
+          }
+          &.rightPage {
+            right: r(6);
+            z-index: 5;
+          }
+          &.page2,&.page3 {
+            opacity: 0;
+          }
+        }
+      }*/
 }
 
 @media screen and (max-width: 767px) {
@@ -509,26 +545,62 @@ footer #copyright {
   }
 }
 
-#comicPage main #container ul {
+#comicPage main #container .leftPage {
   height: 100%;
-  aspect-ratio: 2 / 1.4;
+  width: auto;
+  aspect-ratio: 1 / 1.4;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row-reverse;
+  position: relative;
 }
 
-@media screen and (max-width: 767px) {
-  #comicPage main #container ul {
-    height: auto;
-  }
-}
-
-#comicPage main #container ul .comic {
-  object-fit: cover;
-  width: calc(100% - 1.2rem);
+#comicPage main #container .rightPage {
+  height: 100%;
+  width: auto;
   aspect-ratio: 1 / 1.4;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+#comicPage main #container .rightPage::after {
+  content: '';
+  border-left: 1px solid #271D02;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+#comicPage main #container .comic {
+  width: 95%;
+  height: auto;
+  aspect-ratio: 1 / 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+#comicPage main #container .comic.show {
+  visibility: visible;
+  opacity: 1;
+  z-index: 5;
+}
+
+#comicPage main #container .comic h2 {
+  color: #271D02;
+  margin: 0;
+}
+
+#comicPage main #container .comic ul {
   display: flex;
   align-items: center;
   justify-content: center;
