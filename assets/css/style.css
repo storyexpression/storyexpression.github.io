@@ -597,6 +597,7 @@ footer #copyright {
   opacity: 0;
   position: absolute;
   transition: 1s;
+  color: #707070;
 }
 
 #comicPage main #container .comic.show {
@@ -606,7 +607,7 @@ footer #copyright {
 }
 
 #comicPage main #container .comic h2 {
-  color: #271D02;
+  color: #707070;
   margin: 0;
 }
 
@@ -614,6 +615,30 @@ footer #copyright {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+#comicPage main #container .comic.author {
+  width: 90%;
+  height: auto;
+  border: 1rem #f7c125 solid;
+  border-radius: 26%;
+  position: absolute;
+  background: transparent;
+  z-index: 2;
+}
+
+#comicPage main #container .comic.author::after {
+  content: '';
+  width: calc(100% + 2rem);
+  height: calc(100% + 2rem);
+  border: 1rem #f7c125 solid;
+  border-radius: 20%;
+  position: absolute;
+  background: transparent;
+  z-index: 5;
+  mix-blend-mode: multiply;
+  display: block;
 }
 
 #comicPage main #container .left {
@@ -884,6 +909,45 @@ footer #copyright {
   transform: translate(-172%, -50%) scale(0.35);
 }
 
+@media screen and (max-width: 767px) {
+  #member main .container .memberList .num0 {
+    filter: brightness(25%) saturate(90%);
+    left: 50%;
+    right: 25%;
+    top: 50%;
+    transform: translate(172%, -50%) scale(0.35);
+  }
+  #member main .container .memberList .num1 {
+    filter: brightness(25%) saturate(90%);
+    left: 50%;
+    right: 25%;
+    top: 50%;
+    z-index: 2;
+    transform: translate(128%, -50%) scale(0.5);
+  }
+  #member main .container .memberList .num2 {
+    left: 50%;
+    right: 25%;
+    top: 50%;
+    z-index: 5;
+  }
+  #member main .container .memberList .num3 {
+    filter: brightness(25%) saturate(90%);
+    z-index: 2;
+    left: 50%;
+    right: 25%;
+    top: 50%;
+    transform: translate(-228%, -50%) scale(0.5);
+  }
+  #member main .container .memberList .num4 {
+    filter: brightness(25%) saturate(90%);
+    left: 50%;
+    right: 25%;
+    top: 50%;
+    transform: translate(-272%, -50%) scale(0.35);
+  }
+}
+
 #member main .dot {
   display: flex;
   justify-content: center;
@@ -898,6 +962,7 @@ footer #copyright {
   cursor: pointer;
   opacity: 0.27;
   transition: 1s;
+  transform: scale(0.8);
 }
 
 #member main .dot span:hover {
@@ -906,6 +971,7 @@ footer #copyright {
 
 #member main .dot span.checked {
   opacity: 1;
+  transform: scale(1);
 }
 
 #member footer {
