@@ -628,6 +628,11 @@ footer #copyright {
   z-index: 2;
 }
 
+#comicPage main #container .comic.author h2, #comicPage main #container .comic.author ul {
+  position: relative;
+  z-index: 7;
+}
+
 #comicPage main #container .comic.author::after {
   content: '';
   width: calc(100% + 2rem);
