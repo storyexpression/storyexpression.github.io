@@ -26,11 +26,11 @@ $.fn.textPerspecAnimate = function(){
   });
   this.find('span').each(function(i){
     $(this).transit({
-      x : 0,
-      y : 0,
-      rotateX : 0,
-      rotateY : 0,
-      opacity : 1,
+      'x' : 0,
+      'y' : 0,
+      'rotateX' : 0,
+      'rotateY' : 0,
+      'opacity' : 1,
       delay : i * 30
     },1000,pageUp);
   });

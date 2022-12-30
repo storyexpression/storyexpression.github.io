@@ -143,14 +143,19 @@ let nextBtn = $('#comicPage .turnLeft .btn');
 let leftComic = $('#comicPage .leftPage .comic');
 let rightComic = $('#comicPage .rightPage .comic');
 
+let totalPages = leftComic.length;
+
+console.log(leftComic);
+
 
 prevBtn.on('click',prevPage);
 
 function prevPage() {
   pageNumber--;
   if(pageNumber < 0){
-    return;
+    return pageNumber == 0;
   }
+  
   leftComic.eq(pageNumber + 1).removeClass('show');
   rightComic.eq(pageNumber + 1).removeClass('show');
   leftComic.eq(pageNumber).addClass('show');
@@ -164,8 +169,8 @@ nextBtn.on('click',nextPage);
 
 function nextPage() {
   pageNumber++;
-  if(pageNumber > 3){
-    return;
+  if(pageNumber > totalPages - 1){
+    return pageNumber == totalPages - 1;
   }
 
   leftComic.eq(pageNumber - 1).removeClass('show');
