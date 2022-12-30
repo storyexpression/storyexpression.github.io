@@ -49,7 +49,7 @@
     </header>
     <div id="mouseOver" class="__pc"></div>
     <!--==========================================
-      * Main
+      * ページ送りボタン
     ===========================================-->
     <div class="turnBtn __pc turnLeft">
       <div class="btn">
@@ -67,12 +67,17 @@
         <div class="btnName">Prev</div>
       </div>
     </div>
+    <!--==========================================
+      * Main
+    ===========================================-->    
     <main>
       <!--==========================================
         * Comic
       ===========================================-->
       <div id="container">
         <div class="leftPage">
+          <!--ページ送りのアニメーションを作る、あとページ送りのプラグイン化-->
+          <div class="mekuru"></div>
           <div class="comic show">
             <p>
               扉絵が入ります。
@@ -91,6 +96,7 @@
           </div>
         </div>
         <div class="rightPage">
+          <div class="mekuru"></div>
           <div class="comic show author">
             <h2>ヘンゼルとグレーテル</h2>
           </div>
