@@ -156,7 +156,7 @@ header .headerWrap nav ul a {
     padding-right: 5%;
   }
   header .headerWrap nav {
-    left: 0;
+    right: 0;
     bottom: 0;
     position: fixed;
     height: 100%;
@@ -166,9 +166,9 @@ header .headerWrap nav ul a {
     visibility: hidden;
     opacity: 0;
     transition: 1.8s;
-    transform-origin: 0 0;
-    transform: skewY(-60deg) rotateY(-90deg);
-    -webkit-transform: skewY(-60deg) rotateY(-90deg);
+    transform-origin: 100% 0 0;
+    transform: skewY(60deg) rotateY(90deg);
+    -webkit-transform: skewY(60deg) rotateY(90deg);
   }
   header .headerWrap nav.show {
     opacity: 1;
@@ -566,6 +566,19 @@ footer #copyright {
   position: relative;
 }
 
+#comicPage main #container .leftPage .mekuru {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #271D02;
+  z-index: 6;
+  right: 0;
+  bottom: 0;
+  transform-origin: 100% 0 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
 #comicPage main #container .rightPage {
   height: 100%;
   width: auto;
@@ -576,6 +589,19 @@ footer #copyright {
   justify-content: center;
   flex-direction: row-reverse;
   position: relative;
+}
+
+#comicPage main #container .rightPage .mekuru {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #271D02;
+  z-index: 6;
+  left: 0;
+  bottom: 0;
+  transform-origin: 0 0 0;
+  visibility: hidden;
+  opacity: 0;
 }
 
 #comicPage main #container .rightPage::after {
@@ -1024,15 +1050,15 @@ footer #copyright {
   z-index: 9999;
   letter-spacing: 1rem;
   transition: 2.8s;
-  transform-origin: 0 0 0;
-  left: 0;
+  transform-origin: 100% 0 0;
+  right: 0;
   bottom: 0;
   color: #fff;
 }
 
 #load.loaded {
-  transform: skewY(-60deg) rotateY(-90deg);
-  -webkit-transform: skewY(-60deg) rotateY(-90deg);
+  transform: skewY(60deg) rotateY(90deg);
+  -webkit-transform: skewY(60deg) rotateY(90deg);
   opacity: 0;
   background: #000;
 }
