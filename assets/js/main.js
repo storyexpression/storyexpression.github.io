@@ -53,19 +53,96 @@ if($(window).width() > 768) {
     $('header').removeClass('show');
     $('footer').removeClass('show');
   });
-};
+  $('.turnLeft'+','+'.turnRight').on('mouseover',function(){
+    $('.turnBtn').css('opacity','1');
+    $('.turnBtn a').css({'visibility':'visible','opacity':'1'});
+  });
+  
+  $('.turnLeft'+','+'.turnRight').on('mouseleave',function(){
+    $('.turnBtn').css('opacity','0');
+    $('.turnBtn a').css({'visibility':'hidden','opacity':'0'});
+  });
+}else {
+  $('.turnLeft'+','+'.turnRight').ready(function(){
+    $('.turnBtn').css('opacity','1');
+    $('.turnBtn a').css({'visibility':'visible','opacity':'1'});
+  });
+}
 
-$('.turnLeft'+','+'.turnRight').on('mouseover',function(){
-  $('.turnBtn').css('opacity','1');
-  $('.turnBtn a').css({'visibility':'visible','opacity':'1'});
-});
 
-$('.turnLeft'+','+'.turnRight').on('mouseleave',function(){
-  $('.turnBtn').css('opacity','0');
-  $('.turnBtn a').css({'visibility':'hidden','opacity':'0'});
-});
+// comicPagesSlider
 
+//ページ送りのアニメーション作成（必須）ともう少し使いやすく改良予定
 
+let pageNumber = 0;
+
+let prevBtn = $('#comicPage .turnRight .btn');
+let nextBtn = $('#comicPage .turnLeft .btn');
+
+let comic = $('#comicPage .comic');
+
+let leftPage = $('#comicPage .comic:nth-child(2n)');
+
+let RightPage = $('#comicPage .comic:nth-child(2n + 1)');
+
+// ページの総数取得
+
+let totalPages = comic.length;
+
+console.log(totalPages);
+
+prevBtn.on('click',prevPage);
+
+function prevPage() {
+  pageNumber--;
+  if(pageNumber < 0){
+    // ここの処理中断部分の修正 nextPageも同様に
+    return false;
+  }
+
+  if($(window).width() > 768) {
+    leftPage.eq(pageNumber + 1).removeClass('show');
+    RightPage.eq(pageNumber + 1).removeClass('show');
+  
+    leftPage.eq(pageNumber).addClass('show');
+    RightPage.eq(pageNumber).addClass('show');
+    
+  }else {
+    comic.eq(pageNumber + 1).removeClass('show');
+  
+    comic.eq(pageNumber).addClass('show');
+  }
+
+}
+
+nextBtn.on('click',nextPage);
+
+function nextPage() {
+  pageNumber++;
+  // totalPagesを用いることで他のページでも使えるように
+
+  if($(window).width() > 768) {
+    if(pageNumber > totalPages / 2 - 1){
+      return false;
+    }
+
+    leftPage.eq(pageNumber - 1).removeClass('show');
+    RightPage.eq(pageNumber - 1).removeClass('show');
+  
+    leftPage.eq(pageNumber).addClass('show');
+    RightPage.eq(pageNumber).addClass('show');
+    
+  }else {
+    if(pageNumber > totalPages - 1){
+      return false;
+    }
+    comic.eq(pageNumber - 1).removeClass('show');
+  
+    comic.eq(pageNumber).addClass('show');
+  }
+
+  console.log(pageNumber);
+}
 
 // memberSlider
 
@@ -133,17 +210,14 @@ function rightSlide() {
 
 }
 
-// comicPagesSlider
+//以下仮組みプログラム
 
-let pageNumber = 0;
-
-let prevBtn = $('#comicPage .turnRight .btn');
-let nextBtn = $('#comicPage .turnLeft .btn');
+/*
 
 let leftComic = $('#comicPage .leftPage .comic');
 let rightComic = $('#comicPage .rightPage .comic');
 
-let totalPages = leftComic.length;
+//let totalPages = leftComic.length;
 
 console.log(leftComic);
 
@@ -180,3 +254,5 @@ function nextPage() {
 
   console.log(pageNumber);
 }
+
+*/
