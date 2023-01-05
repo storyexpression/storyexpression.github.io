@@ -460,7 +460,11 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #comicPage .turnBtn {
-    display: none;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    width: 50%;
+    height: 16%;
   }
 }
 
@@ -502,6 +506,62 @@ footer #copyright {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 80%;
+  width: auto;
+  background: #fff;
+  aspect-ratio: 2 / 1.4;
+  /*
+      .leftPage {
+        height: 100%;
+        width: auto;
+        aspect-ratio: 1 / 1.4;
+        background: #fff;
+        //border-radius: r(24);
+        @include flexCentering;
+        flex-direction: row-reverse;
+        position: relative;
+        .mekuru {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          background: $headColor;
+          z-index: 6;
+          right: 0;
+          bottom: 0;
+          transform-origin: 100% 0 0;
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+      .rightPage {
+        height: 100%;
+        width: auto;
+        aspect-ratio: 1 / 1.4;
+        background: #fff;
+        //border-radius: r(24);
+        @include flexCentering;
+        flex-direction: row-reverse;
+        position: relative;
+        .mekuru {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          background: $headColor;
+          z-index: 6;
+          left: 0;
+          bottom: 0;
+          transform-origin: 0 0 0;
+          visibility: hidden;
+          opacity: 0;
+        }
+        &::after {
+          content: '';
+          border-left: 1px solid $headColor;
+          height: 100%;
+          position: absolute;
+          left: 0;
+        }
+      }
+      */
   /*ul {
         height: 100%;
         width: auto;
@@ -551,69 +611,12 @@ footer #copyright {
     padding-right: 5%;
     top: 0;
     transform: translate(0);
+    aspect-ratio: 1 / 1.4;
   }
 }
 
-#comicPage main #container .leftPage {
-  height: 100%;
-  width: auto;
-  aspect-ratio: 1 / 1.4;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row-reverse;
-  position: relative;
-}
-
-#comicPage main #container .leftPage .mekuru {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background: #271D02;
-  z-index: 6;
-  right: 0;
-  bottom: 0;
-  transform-origin: 100% 0 0;
-  visibility: hidden;
-  opacity: 0;
-}
-
-#comicPage main #container .rightPage {
-  height: 100%;
-  width: auto;
-  aspect-ratio: 1 / 1.4;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row-reverse;
-  position: relative;
-}
-
-#comicPage main #container .rightPage .mekuru {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background: #271D02;
-  z-index: 6;
-  left: 0;
-  bottom: 0;
-  transform-origin: 0 0 0;
-  visibility: hidden;
-  opacity: 0;
-}
-
-#comicPage main #container .rightPage::after {
-  content: '';
-  border-left: 1px solid #271D02;
-  height: 100%;
-  position: absolute;
-  left: 0;
-}
-
 #comicPage main #container .comic {
-  width: 95%;
+  width: 48%;
   height: auto;
   aspect-ratio: 1 / 1.4;
   display: flex;
@@ -624,6 +627,38 @@ footer #copyright {
   position: absolute;
   transition: 1s;
   color: #707070;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  #comicPage main #container .comic {
+    width: 95%;
+  }
+}
+
+#comicPage main #container .comic:nth-child(2n + 1) {
+  right: 1%;
+}
+
+@media screen and (max-width: 767px) {
+  #comicPage main #container .comic:nth-child(2n + 1) {
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#comicPage main #container .comic:nth-child(2n) {
+  left: 1%;
+}
+
+@media screen and (max-width: 767px) {
+  #comicPage main #container .comic:nth-child(2n) {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 #comicPage main #container .comic.show {
@@ -645,13 +680,10 @@ footer #copyright {
 }
 
 #comicPage main #container .comic.author {
-  width: 90%;
-  height: auto;
   border: 1rem #f7c125 solid;
   border-radius: 26%;
   position: absolute;
-  background: transparent;
-  z-index: 2;
+  z-index: 6;
 }
 
 #comicPage main #container .comic.author h2, #comicPage main #container .comic.author ul {
@@ -667,9 +699,13 @@ footer #copyright {
   border-radius: 20%;
   position: absolute;
   background: transparent;
-  z-index: 5;
+  z-index: 7;
   mix-blend-mode: multiply;
   display: block;
+}
+
+#comicPage main #container .comic.firstPage, #comicPage main #container .comic.lastPage {
+  z-index: 6;
 }
 
 #comicPage main #container .left {
