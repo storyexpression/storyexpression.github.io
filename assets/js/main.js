@@ -1,6 +1,6 @@
 // iOSでoverflow:hidden;を適用するためのjs
 
-document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
+// document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
 
 // 何かに使えるかも
 
@@ -140,8 +140,6 @@ function nextPage() {
   
     comic.eq(pageNumber).addClass('show');
   }
-
-  console.log(pageNumber);
 }
 
 // memberSlider
