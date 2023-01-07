@@ -612,6 +612,12 @@ footer #copyright {
 }
 
 @media screen and (max-width: 767px) {
+  #comicPage main #container::after {
+    content: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
   #comicPage main #container {
     width: 100%;
     height: auto;
