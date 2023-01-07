@@ -93,6 +93,20 @@ console.log(totalPages);
 
 prevBtn.on('click',prevPage);
 
+// ロード時にshowクラスを付与
+
+$(window).on('load',function(){
+  if($(window).width() > 768) {
+    leftPage.eq(pageNumber).addClass('show');
+    RightPage.eq(pageNumber).addClass('show');
+  }
+  else {
+    comic.eq(pageNumber).addClass('show');
+  };
+
+  console.log('ok');
+});
+
 function prevPage() {
   pageNumber--;
   if(pageNumber < 0){
