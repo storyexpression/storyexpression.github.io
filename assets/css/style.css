@@ -621,8 +621,6 @@ footer #copyright {
   #comicPage main #container {
     width: 100%;
     height: auto;
-    flex-direction: column-reverse;
-    gap: 4rem;
     position: static;
     padding-left: 5%;
     padding-right: 5%;
@@ -651,7 +649,7 @@ footer #copyright {
 
 @media screen and (max-width: 767px) {
   #comicPage main #container .comic {
-    width: 95%;
+    width: 90%;
   }
 }
 
@@ -704,7 +702,7 @@ footer #copyright {
 
 #comicPage main #container .comic.author h2, #comicPage main #container .comic.author ul {
   position: relative;
-  z-index: 7;
+  z-index: 8;
 }
 
 #comicPage main #container .comic.author::after {
