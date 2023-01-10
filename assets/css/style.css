@@ -167,7 +167,7 @@ header .headerWrap nav ul a {
     visibility: hidden;
     opacity: 0;
     transition: 1.8s;
-    transform-origin: 100% 50% 0;
+    transform-origin: 100% 100% 0;
     transform: skewY(60deg) rotateY(90deg);
     -webkit-transform: skewY(60deg) rotateY(90deg);
   }
@@ -1133,7 +1133,7 @@ footer #copyright {
   z-index: 9999;
   letter-spacing: 1rem;
   transition: 2.8s;
-  transform-origin: 100% 50% 0;
+  transform-origin: 100% 100% 0;
   right: 0;
   bottom: 0;
   color: #fff;
