@@ -1,4 +1,4 @@
-// iOSでoverflow:hidden;を適用するためのjs
+// iOSでoverflow:hidden;を適用するためのjs ←特定の環境で縦スクロールも不可能になったため廃止
 
 // document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
 
@@ -127,6 +127,8 @@ function prevPage() {
     comic.eq(pageNumber).addClass('show');
   }
 
+  console.log(pageNumber);
+
 }
 
 nextBtn.on('click',nextPage);
@@ -154,6 +156,9 @@ function nextPage() {
   
     comic.eq(pageNumber).addClass('show');
   }
+  
+  console.log(pageNumber);
+
 }
 
 // memberSlider
@@ -161,15 +166,18 @@ function nextPage() {
 let slideNumber = 0;
 let clickNumber = 0;
 let memBox = $('.memberBox');
+let bottomDot = $('.dot span');
+
+// ロード時にクラス付与
 
 $(window).on('load',sliderSet);
 
 function sliderSet() {
-  $('.memberBox').eq(0).addClass('num0');
-  $('.memberBox').eq(1).addClass('num1');
-  $('.memberBox').eq(2).addClass('num2');
-  $('.memberBox').eq(3).addClass('num3');
-  $('.memberBox').eq(4).addClass('num4');
+  memBox.eq(0).addClass('num0');
+  memBox.eq(1).addClass('num1');
+  memBox.eq(2).addClass('num2');
+  memBox.eq(3).addClass('num3');
+  memBox.eq(4).addClass('num4');
 
 }
 
@@ -192,8 +200,8 @@ function leftSlide() {
   memBox.eq(slideNumber - 2).addClass('num3');
   memBox.eq(slideNumber - 1).addClass('num4');
 
-  $(".dot span").removeClass("checked");
-  $(".dot span").eq(slideNumber).addClass("checked");
+  bottomDot.removeClass("checked");
+  bottomDot.eq(slideNumber).addClass("checked");
 
 }
 
@@ -217,10 +225,100 @@ function rightSlide() {
   memBox.eq(slideNumber - 2).addClass('num3');
   memBox.eq(slideNumber - 1).addClass('num4');
 
-  $(".dot span").removeClass("checked");
-  $(".dot span").eq(slideNumber).addClass("checked");
+  bottomDot.removeClass("checked");
+  bottomDot.eq(slideNumber).addClass("checked");
 
 }
+
+// 下部のボタン操作で移動
+
+bottomDot.eq(0).on('click',buttonSlide0);
+bottomDot.eq(1).on('click',buttonSlide1);
+bottomDot.eq(2).on('click',buttonSlide2);
+bottomDot.eq(3).on('click',buttonSlide3);
+bottomDot.eq(4).on('click',buttonSlide4);
+
+
+function buttonSlide0() {
+  // slideNumberを0に
+  slideNumber = 0;
+  // クラス除去
+  memBox.removeClass('num0 num1 num2 num3 num4');
+  // クラス付与
+  memBox.eq(slideNumber).addClass('num0');
+  memBox.eq(slideNumber + 1).addClass('num1');
+  memBox.eq(slideNumber + 2).addClass('num2');
+  memBox.eq(slideNumber + 3).addClass('num3');
+  memBox.eq(slideNumber + 4).addClass('num4');
+  // ドット部分処理
+  bottomDot.removeClass("checked");
+  bottomDot.eq(slideNumber).addClass("checked");
+};
+
+function buttonSlide1() {
+  // slideNumberを1に
+  slideNumber = 1;
+  // クラス除去
+  memBox.removeClass('num0 num1 num2 num3 num4');
+  // クラス付与
+  memBox.eq(slideNumber).addClass('num0');
+  memBox.eq(slideNumber + 1).addClass('num1');
+  memBox.eq(slideNumber + 2).addClass('num2');
+  memBox.eq(slideNumber + 3).addClass('num3');
+  memBox.eq(slideNumber - 1).addClass('num4');
+  // ドット部分処理
+  bottomDot.removeClass("checked");
+  bottomDot.eq(slideNumber).addClass("checked");
+};
+
+function buttonSlide2() {
+  // slideNumberを2に
+  slideNumber = 2;
+  // クラス除去
+  memBox.removeClass('num0 num1 num2 num3 num4');
+  // クラス付与
+  memBox.eq(slideNumber).addClass('num0');
+  memBox.eq(slideNumber + 1).addClass('num1');
+  memBox.eq(slideNumber + 2).addClass('num2');
+  memBox.eq(slideNumber - 2).addClass('num3');
+  memBox.eq(slideNumber - 1).addClass('num4');
+  // ドット部分処理
+  bottomDot.removeClass("checked");
+  bottomDot.eq(slideNumber).addClass("checked");
+};
+
+function buttonSlide3() {
+  // slideNumberを3に
+  slideNumber = 3;
+  // クラス除去
+  memBox.removeClass('num0 num1 num2 num3 num4');
+  // クラス付与
+  memBox.eq(slideNumber).addClass('num0');
+  memBox.eq(slideNumber + 1).addClass('num1');
+  memBox.eq(slideNumber - 3).addClass('num2');
+  memBox.eq(slideNumber - 2).addClass('num3');
+  memBox.eq(slideNumber - 1).addClass('num4');
+  // ドット部分処理
+  bottomDot.removeClass("checked");
+  bottomDot.eq(slideNumber).addClass("checked");
+};
+
+function buttonSlide4() {
+  // slideNumberを4に
+  slideNumber = 4;
+  // クラス除去
+  memBox.removeClass('num0 num1 num2 num3 num4');
+  // クラス付与
+  memBox.eq(slideNumber).addClass('num0');
+  memBox.eq(slideNumber - 4).addClass('num1');
+  memBox.eq(slideNumber - 3).addClass('num2');
+  memBox.eq(slideNumber - 2).addClass('num3');
+  memBox.eq(slideNumber - 1).addClass('num4');
+  // ドット部分処理
+  bottomDot.removeClass("checked");
+  bottomDot.eq(slideNumber).addClass("checked");
+};
+
 
 //以下仮組みプログラム
 
