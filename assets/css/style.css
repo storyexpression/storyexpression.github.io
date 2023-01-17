@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @media screen and (min-width: 1281px) {
   .__pc {
     display: block;
@@ -791,224 +790,12 @@ footer #copyright {
 
 #member main {
   margin: 0 auto;
-  /* 可変させない場合
-    .container {
-      margin-bottom: r(68);
-      position: relative;
-      height: r(552);
-      .arrow {
-        @include abCentering;
-        width: r(724);
-        z-index:8;
-        cursor: pointer;
-        @include mq(sp) {
-          width: r(676);
-          max-width: 100%;
-        }
-        .left,.right {
-          position: absolute;
-          transition: 1s;
-          top: 50%;
-          transform: translateY(-50%);
-          &:hover {
-            opacity: 0.5;
-          }
-          svg {
-            width: r(76);
-            height: r(76);
-            fill: #fff;
-          }
-        }
-        .left {
-          left: 0;
-        }
-        .right {
-          right: 0;
-        }
-      }
-      .memberList {
-        height: r(552);
-        transition: 1s;
-        position: relative;
-        width: r(1234);
-        margin: 0 auto;
-        transition: .8s ease-out;
-        @include mq(sp) {
-          width: 100%;
-        }
-        .memberBox {
-          //width: r(222);
-          //height: r(276);
-          background: #CACACA;
-          display: flex;
-          flex-direction: column;
-          //gap: r(14);
-          //border-radius: r(14);
-          justify-content: center;
-          //filter: brightness(45%) saturate(90%);
-          cursor: pointer;
-          transition: all .8s ease-out;
-          position: absolute;
-          top: 50%;
-          transform: translate(-50%,-50%);
-          transform-origin: 50% 50% 0;
-          // 本来checkedのcss
-          width: r(444);
-          max-width: 100%;
-          height: r(552);
-          gap: r(28);
-          border-radius: r(14);
-          z-index: 1;
-          @include mq(sp) {
-            transform: translate(-50%,-50%) scale(0.8);
-          }
-          .img {
-            //width: r(204);
-            //height: r(157);
-            border: 1px solid #707070;
-            border-radius: r(30);
-            background: #fff;
-            margin: 0 auto;
-            transition: all .8s ease-out;
-            // checked
-            width: r(408);
-            height: r(314);
-            img {
-              width: 100%;
-              border-radius: r(30);
-            }
-          }
-          .detail {
-            border: 1px solid $headColor;
-            //width: r(204);
-            //height: r(84);
-            background: #fff;
-            margin: 0 auto;
-            border-radius: r(18);
-            transition: all .8s ease-out;
-            // checked
-            width: r(408);
-            height: r(168);
-            .memberDetail {
-              margin: r(8) r(11);
-              transition: all .8s ease-out;
-              // checked
-              margin: r(16) r(22);
-              @include mq(note) {
-                //margin: r(4) r(6);
-              }
-              h3 {
-                color: $headColor;
-                //font-size: r(14);
-                //margin-bottom: r(4);
-                transition: all .8s ease-out;
-                line-height: 1;
-                font-size: r(28);
-                margin-bottom: r(8);
-                @include mq(note) {
-                  //transform: scale(0.9);
-                  //margin-bottom: r(2);
-                }
-              }
-              p {
-                color: $textColor;
-                //font-size: r(8);
-                //line-height: 1.4;
-                transition: all .8s ease-out;
-                font-size: r(16);
-                line-height: 2;
-                @include mq(note) {
-                  //transform: scale(0.9);
-                }
-              }
-            }
-          }
-        }
-        .num0 {
-          filter: brightness(25%) saturate(90%);
-          left: 50%;
-          right: 25%;
-          top: 50%;
-          transform: translate(72%,-50%) scale(0.35);
-        }
-        .num1 {
-          filter: brightness(25%) saturate(90%);
-          left: 50%;
-          right: 25%;
-          top: 50%;
-          z-index: 2;
-          transform: translate(28%,-50%) scale(0.5);
-        }
-        .num2 {
-          left: 50%;
-          right: 25%;
-          top: 50%;
-          z-index: 5;
-        }
-        .num3 {
-          filter: brightness(25%) saturate(90%);
-          z-index: 2;
-          left: 50%;
-          right: 25%;
-          top: 50%;
-          transform: translate(-128%,-50%) scale(0.5);
-        }
-        .num4 {
-          filter: brightness(25%) saturate(90%);
-          left: 50%;
-          right: 25%;
-          top: 50%;
-          transform: translate(-172%,-50%) scale(0.35);
-        } 
-        @include mq(sp) {
-          .num0 {
-            filter: brightness(25%) saturate(90%);
-            left: 50%;
-            right: 25%;
-            top: 50%;
-            transform: translate(172%,-50%) scale(0.35);
-          }
-          .num1 {
-            filter: brightness(25%) saturate(90%);
-            left: 50%;
-            right: 25%;
-            top: 50%;
-            z-index: 2;
-            transform: translate(128%,-50%) scale(0.5);
-          }
-          .num2 {
-            left: 50%;
-            right: 25%;
-            top: 50%;
-            z-index: 5;
-          }
-          .num3 {
-            filter: brightness(25%) saturate(90%);
-            z-index: 2;
-            left: 50%;
-            right: 25%;
-            top: 50%;
-            transform: translate(-228%,-50%) scale(0.5);
-          }
-          .num4 {
-            filter: brightness(25%) saturate(90%);
-            left: 50%;
-            right: 25%;
-            top: 50%;
-            transform: translate(-272%,-50%) scale(0.35);
-          } 
-        }
-      }
-    }
-    */
 }
 
 @media screen and (max-width: 767px) {
   #member main {
-    padding: 10rem 0 5rem 0;
+    padding: 10rem 5% 5rem 5%;
     width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
     margin: 0;
   }
 }
@@ -1019,10 +806,16 @@ footer #copyright {
   height: 28.75vw;
 }
 
+@media screen and (max-width: 1280px) {
+  #member main .container {
+    margin-bottom: 4.25vw;
+    height: 34.5vw;
+  }
+}
+
 @media screen and (max-width: 767px) {
   #member main .container {
     margin-bottom: 6.8rem;
-    position: relative;
     height: 55.2rem;
   }
 }
@@ -1035,6 +828,12 @@ footer #copyright {
   width: 37.708vw;
   z-index: 8;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+  #member main .container .arrow {
+    width: 42.25vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1061,6 +860,13 @@ footer #copyright {
   fill: #fff;
 }
 
+@media screen and (max-width: 1280px) {
+  #member main .container .arrow .left svg, #member main .container .arrow .right svg {
+    width: 4.75vw;
+    height: 4.75vw;
+  }
+}
+
 @media screen and (max-width: 767px) {
   #member main .container .arrow .left svg, #member main .container .arrow .right svg {
     width: 7.6rem;
@@ -1085,6 +891,13 @@ footer #copyright {
   transition: .8s ease-out;
 }
 
+@media screen and (max-width: 1280px) {
+  #member main .container .memberList {
+    height: 34.5vw;
+    width: 96.406vw;
+  }
+}
+
 @media screen and (max-width: 767px) {
   #member main .container .memberList {
     width: 100%;
@@ -1101,6 +914,8 @@ footer #copyright {
   transition: all .8s ease-out;
   position: absolute;
   top: 50%;
+  left: 50%;
+  right: 25%;
   transform: translate(-50%, -50%);
   transform-origin: 50% 50% 0;
   width: 23.125vw;
@@ -1109,6 +924,15 @@ footer #copyright {
   gap: 1.458vw;
   border-radius: 0.729vw;
   z-index: 1;
+}
+
+@media screen and (max-width: 1280px) {
+  #member main .container .memberList .memberBox {
+    width: 27.75vw;
+    height: 34.5vw;
+    gap: 1.75vw;
+    border-radius: 0.875vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1137,6 +961,17 @@ footer #copyright {
   border-radius: 1.563vw;
 }
 
+@media screen and (max-width: 1280px) {
+  #member main .container .memberList .memberBox .img {
+    width: 25.5vw;
+    height: 19.625vw;
+    border-radius: 1.875vw;
+  }
+  #member main .container .memberList .memberBox .img img {
+    border-radius: 1.875vw;
+  }
+}
+
 @media screen and (max-width: 767px) {
   #member main .container .memberList .memberBox .img {
     border-radius: 3rem;
@@ -1158,6 +993,14 @@ footer #copyright {
   height: 8.75vw;
 }
 
+@media screen and (max-width: 1280px) {
+  #member main .container .memberList .memberBox .detail {
+    border-radius: 1.125vw;
+    width: 25.5vw;
+    height: 10.5vw;
+  }
+}
+
 @media screen and (max-width: 767px) {
   #member main .container .memberList .memberBox .detail {
     border-radius: 1.8rem;
@@ -1169,6 +1012,12 @@ footer #copyright {
 #member main .container .memberList .memberBox .detail .memberDetail {
   transition: all .8s ease-out;
   margin: 0.834vw 1.146vw;
+}
+
+@media screen and (max-width: 1280px) {
+  #member main .container .memberList .memberBox .detail .memberDetail {
+    margin: 1vw 1.375vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1185,6 +1034,13 @@ footer #copyright {
   margin-bottom: 0.417vw;
 }
 
+@media screen and (max-width: 1280px) {
+  #member main .container .memberList .memberBox .detail .memberDetail h3 {
+    font-size: 1.75vw;
+    margin-bottom: 0.5vw;
+  }
+}
+
 @media screen and (max-width: 767px) {
   #member main .container .memberList .memberBox .detail .memberDetail h3 {
     font-size: 2.8rem;
@@ -1199,6 +1055,12 @@ footer #copyright {
   line-height: 2;
 }
 
+@media screen and (max-width: 1280px) {
+  #member main .container .memberList .memberBox .detail .memberDetail p {
+    font-size: 1vw;
+  }
+}
+
 @media screen and (max-width: 767px) {
   #member main .container .memberList .memberBox .detail .memberDetail p {
     font-size: 1.6rem;
@@ -1208,80 +1070,50 @@ footer #copyright {
 
 #member main .container .memberList .num0 {
   filter: brightness(25%) saturate(90%);
-  left: 50%;
-  right: 25%;
-  top: 50%;
   transform: translate(72%, -50%) scale(0.35);
 }
 
 #member main .container .memberList .num1 {
   filter: brightness(25%) saturate(90%);
-  left: 50%;
-  right: 25%;
-  top: 50%;
   z-index: 2;
   transform: translate(28%, -50%) scale(0.5);
 }
 
 #member main .container .memberList .num2 {
-  left: 50%;
-  right: 25%;
-  top: 50%;
   z-index: 5;
 }
 
 #member main .container .memberList .num3 {
   filter: brightness(25%) saturate(90%);
   z-index: 2;
-  left: 50%;
-  right: 25%;
-  top: 50%;
   transform: translate(-128%, -50%) scale(0.5);
 }
 
 #member main .container .memberList .num4 {
   filter: brightness(25%) saturate(90%);
-  left: 50%;
-  right: 25%;
-  top: 50%;
   transform: translate(-172%, -50%) scale(0.35);
 }
 
 @media screen and (max-width: 767px) {
   #member main .container .memberList .num0 {
     filter: brightness(25%) saturate(90%);
-    left: 50%;
-    right: 25%;
-    top: 50%;
     transform: translate(172%, -50%) scale(0.35);
   }
   #member main .container .memberList .num1 {
     filter: brightness(25%) saturate(90%);
-    left: 50%;
-    right: 25%;
-    top: 50%;
     z-index: 2;
     transform: translate(128%, -50%) scale(0.5);
   }
   #member main .container .memberList .num2 {
-    left: 50%;
-    right: 25%;
-    top: 50%;
     z-index: 5;
   }
   #member main .container .memberList .num3 {
     filter: brightness(25%) saturate(90%);
     z-index: 2;
-    left: 50%;
-    right: 25%;
-    top: 50%;
     transform: translate(-228%, -50%) scale(0.5);
   }
   #member main .container .memberList .num4 {
     filter: brightness(25%) saturate(90%);
-    left: 50%;
-    right: 25%;
-    top: 50%;
     transform: translate(-272%, -50%) scale(0.35);
   }
 }
@@ -1383,11 +1215,11 @@ footer #copyright {
   display: flex;
   gap: 2rem;
   flex-direction: row-reverse;
-  align-items: baseline;
+  align-items: center;
 }
 
 #load .loadImg .wrap svg {
-  width: 16rem;
+  width: 8rem;
   height: auto;
   opacity: 0;
 }
