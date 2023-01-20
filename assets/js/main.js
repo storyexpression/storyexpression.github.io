@@ -53,11 +53,6 @@ if($(window).width() > 768) {
     $('header').removeClass('show');
     $('footer').removeClass('show');
   });
-}else {
-  $('.turnLeft'+','+'.turnRight').ready(function(){
-    $('.turnBtn').css('opacity','1');
-    $('.turnBtn a').css({'visibility':'visible','opacity':'1'});
-  });
 }
 
 
