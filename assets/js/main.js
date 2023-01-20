@@ -53,15 +53,6 @@ if($(window).width() > 768) {
     $('header').removeClass('show');
     $('footer').removeClass('show');
   });
-  $('.turnLeft'+','+'.turnRight').on('mouseover',function(){
-    $('.turnBtn').css('opacity','1');
-    $('.turnBtn a').css({'visibility':'visible','opacity':'1'});
-  });
-  
-  $('.turnLeft'+','+'.turnRight').on('mouseleave',function(){
-    $('.turnBtn').css('opacity','0');
-    $('.turnBtn a').css({'visibility':'hidden','opacity':'0'});
-  });
 }else {
   $('.turnLeft'+','+'.turnRight').ready(function(){
     $('.turnBtn').css('opacity','1');
