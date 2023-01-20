@@ -110,7 +110,7 @@ $(window).on('load',function(){
 function prevPage() {
   pageNumber--;
   if(pageNumber < 0){
-    // ここの処理中断部分の修正 nextPageも同様に
+    // リンク用のプログラムを差し込むことでリンクは可（）全部にどう適用するかが問題かも
     return false;
   }
 
@@ -159,6 +159,16 @@ function nextPage() {
   
   console.log(pageNumber);
 
+}
+
+// 下限もしくは上限時のボタン挙動用のパーツ
+
+function changePage() {
+  if(pageNumber < 0) {
+    $('.restaurant .turnRight .btn').on('click',function(){
+      window.location.href ='../alice/';
+    })
+  }
 }
 
 // memberSlider
@@ -318,51 +328,3 @@ function buttonSlide4() {
   bottomDot.removeClass("checked");
   bottomDot.eq(slideNumber).addClass("checked");
 };
-
-
-//以下仮組みプログラム
-
-/*
-
-let leftComic = $('#comicPage .leftPage .comic');
-let rightComic = $('#comicPage .rightPage .comic');
-
-//let totalPages = leftComic.length;
-
-console.log(leftComic);
-
-
-prevBtn.on('click',prevPage);
-
-function prevPage() {
-  pageNumber--;
-  if(pageNumber < 0){
-    return pageNumber == 0;
-  }
-  
-  leftComic.eq(pageNumber + 1).removeClass('show');
-  rightComic.eq(pageNumber + 1).removeClass('show');
-  leftComic.eq(pageNumber).addClass('show');
-  rightComic.eq(pageNumber).addClass('show');
-
-  console.log(pageNumber);
-
-}
-
-nextBtn.on('click',nextPage);
-
-function nextPage() {
-  pageNumber++;
-  if(pageNumber > totalPages - 1){
-    return pageNumber == totalPages - 1;
-  }
-
-  leftComic.eq(pageNumber - 1).removeClass('show');
-  rightComic.eq(pageNumber - 1).removeClass('show');
-  leftComic.eq(pageNumber).addClass('show');
-  rightComic.eq(pageNumber).addClass('show');
-
-  console.log(pageNumber);
-}
-
-*/
