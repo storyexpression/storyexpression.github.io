@@ -55,6 +55,51 @@ if($(window).width() > 768) {
   });
 }
 
+// モーダルウィンドウ
+
+// オーバーレイ部分
+
+let overray = document.createElement('div');
+overray.className = 'overray';
+
+let modalBase = $('#comicPage');
+modalBase.append(overray);
+
+// 漫画画像クリックでオーバーレイ表示
+
+let comicImg = $('#comicPage .comic img');
+
+comicImg.on('click',modalOpen);
+
+//オーバーレイ要素に内包されてる閉じるボタン
+
+let closeBtn = document.createElement('div');
+closeBtn.className = 'closeBtn';
+
+let topLine = document.createElement('span');
+let bottomLine = document.createElement('span');
+
+$('#comicPage .overray').append(closeBtn);
+
+closeBtn.append(topLine);
+closeBtn.append(bottomLine);
+
+$('.closeBtn').on('click',modalClose);
+$('#comicPage .overray').on('click',modalClose);
+
+function modalOpen() {
+  $('#comicPage .overray').transit({
+    visibility : 'visible',
+    opacity : 0.8
+  });
+}
+
+function modalClose() {
+  $('#comicPage .overray').transit({
+    visibility : 'hidden',
+    opacity : 0
+  });
+}
 
 // comicPagesSlider
 
@@ -77,8 +122,6 @@ let totalPages = comic.length;
 
 console.log(totalPages);
 
-prevBtn.on('click',prevPage);
-
 // ロード時にshowクラスを付与
 
 $(window).on('load',function(){
@@ -92,6 +135,8 @@ $(window).on('load',function(){
 
   console.log('ok');
 });
+
+prevBtn.on('click',prevPage);
 
 function prevPage() {
   pageNumber--;
