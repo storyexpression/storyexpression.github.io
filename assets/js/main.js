@@ -44,6 +44,8 @@ $('#toggle').on('click',function(){
 
 // comicPages
 
+/*
+
 if($(window).width() > 768) {
   $('#comicPage #mouseOver').on('mouseover',function() {
     $('header').addClass('show');
@@ -55,62 +57,18 @@ if($(window).width() > 768) {
   });
 }
 
-// モーダルウィンドウ
-
-// オーバーレイ部分
-
-let overray = document.createElement('div');
-overray.className = 'overray';
-
-let modalBase = $('#comicPage');
-modalBase.append(overray);
-
-// 漫画画像クリックでオーバーレイ表示
-
-let comicImg = $('#comicPage .comic img');
-
-comicImg.on('click',modalOpen);
-
-//オーバーレイ要素に内包されてる閉じるボタン
-
-let closeBtn = document.createElement('div');
-closeBtn.className = 'closeBtn';
-
-let topLine = document.createElement('span');
-let bottomLine = document.createElement('span');
-
-$('#comicPage .overray').append(closeBtn);
-
-closeBtn.append(topLine);
-closeBtn.append(bottomLine);
-
-$('.closeBtn').on('click',modalClose);
-$('#comicPage .overray').on('click',modalClose);
-
-function modalOpen() {
-  $('#comicPage .overray').transit({
-    visibility : 'visible',
-    opacity : 0.8
-  });
-}
-
-function modalClose() {
-  $('#comicPage .overray').transit({
-    visibility : 'hidden',
-    opacity : 0
-  });
-}
+*/
 
 // comicPagesSlider
 
 //ページ送りのアニメーション作成（必須）ともう少し使いやすく改良予定
 
+let comic = $('#comicPage .comic');
+
 let pageNumber = 0;
 
 let prevBtn = $('#comicPage .turnRight .btn');
 let nextBtn = $('#comicPage .turnLeft .btn');
-
-let comic = $('#comicPage .comic');
 
 let leftPage = $('#comicPage .comic:nth-child(2n)');
 
@@ -200,6 +158,62 @@ function changePage() {
       window.location.href ='../alice/';
     })
   }
+}
+
+// モーダルウィンドウ
+
+// オーバーレイ部分
+
+let modalBack = document.createElement('div');
+modalBack.className = 'modalBack';
+
+let modalBase = $('#comicPage');
+modalBase.append(modalBack);
+
+let modalWindow = $('#comicPage .modalBack');
+
+// 漫画画像クリックでオーバーレイ表示
+
+let comicImg = comic.has('img');
+
+comicImg.on('click',modalOpen);
+
+//オーバーレイ要素に内包されてる閉じるボタン
+
+let closeBtn = document.createElement('div');
+closeBtn.className = 'closeBtn';
+
+let topLine = document.createElement('span');
+let bottomLine = document.createElement('span');
+
+modalWindow.append(closeBtn);
+
+closeBtn.append(topLine);
+closeBtn.append(bottomLine);
+
+$('.closeBtn').on('click',modalClose);
+modalWindow.on('click',modalClose);
+
+//開閉動作
+
+function modalOpen() {
+  modalWindow.transit({
+    visibility : 'visible',
+    opacity : 1
+  });
+  //ここに画像を開く記述を追加
+  if($(window).width() > 768) {
+    modalWindow.append($(this).clone());
+    //comicImg.eq(1).clone().append(modalWindow);
+  };
+};
+
+function modalClose() {
+  $('#comicPage .modalBack').transit({
+    visibility : 'hidden',
+    opacity : 0
+  });
+  $('.modalBack .comic').remove();
 }
 
 // memberSlider
