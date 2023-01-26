@@ -507,26 +507,40 @@ footer #copyright {
   }
 }
 
-#comicPage .overray {
+#comicPage .modalBack {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
   z-index: 999;
-  background: #111;
+  background: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100%;
   visibility: hidden;
   opacity: 0;
 }
 
-#comicPage .overray.show {
-  visibility: visible;
-  opacity: 0.8;
+#comicPage .modalBack .comic {
+  height: 90%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
-#comicPage .overray .closeBtn {
+#comicPage .modalBack .comic:hover {
+  opacity: 1;
+}
+
+#comicPage .modalBack .comic img {
+  height: 100%;
+  width: auto;
+}
+
+#comicPage .modalBack .closeBtn {
   width: 4.8rem;
   height: 4.8rem;
   position: fixed;
@@ -539,11 +553,11 @@ footer #copyright {
   transition: .5s;
 }
 
-#comicPage .overray .closeBtn:hover {
+#comicPage .modalBack .closeBtn:hover {
   opacity: 0.8;
 }
 
-#comicPage .overray .closeBtn span {
+#comicPage .modalBack .closeBtn span {
   width: 4.8rem;
   height: 0.3rem;
   background: #fff;
@@ -555,7 +569,7 @@ footer #copyright {
   top: 2.7rem;
 }
 
-#comicPage .overray .closeBtn span:last-child {
+#comicPage .modalBack .closeBtn span:last-child {
   content: '';
   transform: rotate(45deg);
   bottom: 1.8rem;
