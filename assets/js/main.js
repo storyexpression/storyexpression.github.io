@@ -197,14 +197,19 @@ modalWindow.on('click',modalClose);
 //開閉動作
 
 function modalOpen() {
-  modalWindow.transit({
-    visibility : 'visible',
-    opacity : 1
-  });
   //ここに画像を開く記述を追加
-  if($(window).width() > 768) {
-    modalWindow.append($(this).clone());
-    //comicImg.eq(1).clone().append(modalWindow);
+  if($(this) != comic.last()) {
+    if($(window).width() > 768) {
+      modalWindow.transit({
+        visibility : 'visible',
+        opacity : 1
+      });
+      modalWindow.append($(this).clone());
+    }else {
+      return false;
+    };
+  }else {
+    return false;
   };
 };
 
