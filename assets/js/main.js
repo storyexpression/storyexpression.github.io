@@ -1,11 +1,6 @@
-// iOSでoverflow:hidden;を適用するためのjs ←特定の環境で縦スクロールも不可能になったため廃止
-
-// document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
-
 // 何かに使えるかも
 
-let screenHeight = window.innerHeight;
-let screenWidth = window.innerWidth;
+let breakPoint = $(window).width() > 768;
 
 // load animation
 
@@ -24,7 +19,7 @@ function pageUp(){
 
 // header
 
-if($(window).width() > 768) {
+if(breakPoint) {
   $('#mouseOver').on('mouseover',function(){
     $('header').addClass('show');
   });
@@ -43,21 +38,6 @@ $('#toggle').on('click',function(){
 });
 
 // comicPages
-
-/*
-
-if($(window).width() > 768) {
-  $('#comicPage #mouseOver').on('mouseover',function() {
-    $('header').addClass('show');
-    $('footer').addClass('show');
-  });
-  $('#comicPage header').on('mouseleave',function(){
-    $('header').removeClass('show');
-    $('footer').removeClass('show');
-  });
-}
-
-*/
 
 // comicPagesSlider
 
@@ -83,7 +63,7 @@ console.log(totalPages);
 // ロード時にshowクラスを付与
 
 $(window).on('load',function(){
-  if($(window).width() > 768) {
+  if(breakPoint) {
     leftPage.eq(pageNumber).addClass('show');
     RightPage.eq(pageNumber).addClass('show');
   }
@@ -165,7 +145,6 @@ function lowerLimit() {
     });
   };
 }
-
 function upperLimit() {
   if(pageNumber < 0) {
     $('.restaurant .turnleft .btn').on('click',function(){
@@ -224,7 +203,7 @@ $('.bg').on('click',modalClose);
 function modalOpen() {
   //ここに画像を開く記述を追加
   if($(this) != comic.last()) {
-    if($(window).width() > 768) {
+    if(breakPoint) {
       modalWindow.transit({
         visibility : 'visible',
         opacity : 1
@@ -249,7 +228,6 @@ function modalClose() {
 // memberSlider
 
 let slideNumber = 0;
-let clickNumber = 0;
 let memBox = $('.memberBox');
 let bottomDot = $('.dot span');
 
@@ -263,7 +241,6 @@ function sliderSet() {
   memBox.eq(2).addClass('num2');
   memBox.eq(3).addClass('num3');
   memBox.eq(4).addClass('num4');
-
 }
 
 // arrow left
@@ -281,7 +258,6 @@ function leftSlide() {
   memBox.eq(slideNumber).addClass('num0');
   memBox.eq(slideNumber - 4).addClass('num1');
   memBox.eq(slideNumber - 3).addClass('num2');
-  //memBox.eq(slideNumber - 2).removeClass("checked");
   memBox.eq(slideNumber - 2).addClass('num3');
   memBox.eq(slideNumber - 1).addClass('num4');
 
@@ -306,7 +282,6 @@ function rightSlide() {
   memBox.eq(slideNumber - 5).addClass('num0');
   memBox.eq(slideNumber - 4).addClass('num1');
   memBox.eq(slideNumber - 3).addClass('num2');
-  //memBox.eq(slideNumber - 4).removeClass("checked");
   memBox.eq(slideNumber - 2).addClass('num3');
   memBox.eq(slideNumber - 1).addClass('num4');
 
