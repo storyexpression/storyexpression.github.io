@@ -152,25 +152,50 @@ function nextPage() {
 
 // 下限もしくは上限時のボタン挙動用のパーツ
 
-function changePage() {
+function lowerLimit() {
   if(pageNumber < 0) {
     $('.restaurant .turnRight .btn').on('click',function(){
       window.location.href ='../alice/';
-    })
-  }
+    });
+    $('.alice .turnRight .btn').on('click',function(){
+      window.location.href ='../hansel/';
+    });
+    $('.hansel .turnRight .btn').on('click',function(){
+      window.location.href ='../restaurant/';
+    });
+  };
+}
+
+function upperLimit() {
+  if(pageNumber < 0) {
+    $('.restaurant .turnleft .btn').on('click',function(){
+      window.location.href ='../hansel/';
+    });
+    $('.alice .turnleft .btn').on('click',function(){
+      window.location.href ='../restaurant/';
+    });
+    $('.hansel .turnleft .btn').on('click',function(){
+      window.location.href ='../alice/';
+    });
+  };
 }
 
 // モーダルウィンドウ
 
-// オーバーレイ部分
-
-let modalBack = document.createElement('div');
-modalBack.className = 'modalBack';
+let modalWrap = document.createElement('div');
+modalWrap.className = 'modalWrap';
 
 let modalBase = $('#comicPage');
-modalBase.append(modalBack);
+modalBase.append(modalWrap);
 
-let modalWindow = $('#comicPage .modalBack');
+let modalWindow = $('#comicPage .modalWrap');
+
+// オーバーレイ
+
+let modalBack = document.createElement('div');
+modalBack.className = 'bg';
+
+modalWindow.append(modalBack);
 
 // 漫画画像クリックでオーバーレイ表示
 
@@ -192,7 +217,7 @@ closeBtn.append(topLine);
 closeBtn.append(bottomLine);
 
 $('.closeBtn').on('click',modalClose);
-modalWindow.on('click',modalClose);
+$('.bg').on('click',modalClose);
 
 //開閉動作
 
@@ -214,7 +239,7 @@ function modalOpen() {
 };
 
 function modalClose() {
-  $('#comicPage .modalBack').transit({
+  $('#comicPage .modalWrap').transit({
     visibility : 'hidden',
     opacity : 0
   });
