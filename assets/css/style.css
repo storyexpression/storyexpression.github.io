@@ -507,21 +507,33 @@ footer #copyright {
   }
 }
 
-#comicPage .modalBack {
+#comicPage .modalWrap {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100%;
   visibility: hidden;
   opacity: 0;
+  transition: .5s;
 }
 
-#comicPage .modalBack .comic {
+#comicPage .modalWrap .bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9997;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+}
+
+#comicPage .modalWrap .comic {
   height: 90%;
   width: auto;
   position: absolute;
@@ -531,16 +543,16 @@ footer #copyright {
   z-index: 9999;
 }
 
-#comicPage .modalBack .comic:hover {
+#comicPage .modalWrap .comic:hover {
   opacity: 1;
 }
 
-#comicPage .modalBack .comic img {
+#comicPage .modalWrap .comic img {
   height: 100%;
   width: auto;
 }
 
-#comicPage .modalBack .closeBtn {
+#comicPage .modalWrap .closeBtn {
   width: 4.8rem;
   height: 4.8rem;
   position: fixed;
@@ -553,11 +565,11 @@ footer #copyright {
   transition: .5s;
 }
 
-#comicPage .modalBack .closeBtn:hover {
+#comicPage .modalWrap .closeBtn:hover {
   opacity: 0.8;
 }
 
-#comicPage .modalBack .closeBtn span {
+#comicPage .modalWrap .closeBtn span {
   width: 4.8rem;
   height: 0.3rem;
   background: #fff;
@@ -569,7 +581,7 @@ footer #copyright {
   top: 2.7rem;
 }
 
-#comicPage .modalBack .closeBtn span:last-child {
+#comicPage .modalWrap .closeBtn span:last-child {
   content: '';
   transform: rotate(45deg);
   bottom: 1.8rem;
@@ -644,59 +656,6 @@ footer #copyright {
   width: auto;
   background: #fff;
   aspect-ratio: 2 / 1.4;
-  /*
-      .leftPage {
-        height: 100%;
-        width: auto;
-        aspect-ratio: 1 / 1.4;
-        background: #fff;
-        //border-radius: r(24);
-        @include flexCentering;
-        flex-direction: row-reverse;
-        position: relative;
-        .mekuru {
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          background: $headColor;
-          z-index: 6;
-          right: 0;
-          bottom: 0;
-          transform-origin: 100% 0 0;
-          visibility: hidden;
-          opacity: 0;
-        }
-      }
-      .rightPage {
-        height: 100%;
-        width: auto;
-        aspect-ratio: 1 / 1.4;
-        background: #fff;
-        //border-radius: r(24);
-        @include flexCentering;
-        flex-direction: row-reverse;
-        position: relative;
-        .mekuru {
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          background: $headColor;
-          z-index: 6;
-          left: 0;
-          bottom: 0;
-          transform-origin: 0 0 0;
-          visibility: hidden;
-          opacity: 0;
-        }
-        &::after {
-          content: '';
-          border-left: 1px solid $headColor;
-          height: 100%;
-          position: absolute;
-          left: 0;
-        }
-      }
-      */
 }
 
 #comicPage main #container::after {
@@ -712,16 +671,6 @@ footer #copyright {
 @media screen and (max-width: 767px) {
   #comicPage main #container::after {
     content: none;
-    /*
-          width: 100%;
-          height: auto;
-          border: none;
-          left: 0;
-          background: $headColor;
-          transform: translate(0);
-          aspect-ratio: 1 / 1.4;
-          z-index: 10;
-          */
   }
 }
 
@@ -797,6 +746,15 @@ footer #copyright {
 
 #comicPage main #container .comic img:hover {
   opacity: 0.5;
+}
+
+@media screen and (max-width: 767px) {
+  #comicPage main #container .comic img {
+    cursor: auto;
+  }
+  #comicPage main #container .comic img:hover {
+    opacity: 1;
+  }
 }
 
 #comicPage main #container .comic h2 {
