@@ -203,7 +203,7 @@ function modalOpen() {
       });
       modalWindow.append($(this).clone());
     }else {
-      return false;
+      ;
     };
   }else {
     return false;
