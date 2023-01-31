@@ -1,4 +1,4 @@
-// 何かに使えるかも
+// ブレイクポイント分岐変数
 
 let breakPoint = $(window).width() > 768;
 
@@ -54,6 +54,11 @@ let leftPage = $('#comicPage .comic:nth-child(2n)');
 
 let RightPage = $('#comicPage .comic:nth-child(2n + 1)');
 
+let restaurant = $('body').hasClass('restaurant');
+let alice = $('body').hasClass('alice');
+let hansel = $('body').hasClass('hansel');
+
+
 // ページの総数取得
 
 let totalPages = comic.length;
@@ -79,8 +84,13 @@ prevBtn.on('click',prevPage);
 function prevPage() {
   pageNumber--;
   if(pageNumber < 0){
-    // リンク用のプログラムを差し込むことでリンクは可（）全部にどう適用するかが問題かも
-    return false;
+    if(restaurant){
+      window.location.href ='../alice/';
+    }else if(alice){
+      window.location.href ='../hansel/';
+    }else {
+      window.location.href ='../restaurant/';
+    }
   }
 
   if($(window).width() > 768) {
@@ -108,7 +118,13 @@ function nextPage() {
 
   if($(window).width() > 768) {
     if(pageNumber > totalPages / 2 - 1){
-      return false;
+      if(restaurant){
+        window.location.href ='../hansel/';
+      }else if(alice){
+        window.location.href ='../restaurant/';
+      } else {
+        window.location.href ='../alice/';
+      }
     }
 
     leftPage.eq(pageNumber - 1).removeClass('show');
@@ -119,7 +135,13 @@ function nextPage() {
     
   }else {
     if(pageNumber > totalPages - 1){
-      return false;
+      if(restaurant){
+        window.location.href ='../hansel/';
+      }else if(alice){
+        window.location.href ='../restaurant/';
+      } else {
+        window.location.href ='../alice/';
+      }
     }
     comic.eq(pageNumber - 1).removeClass('show');
   
@@ -128,35 +150,6 @@ function nextPage() {
   
   console.log(pageNumber);
 
-}
-
-// 下限もしくは上限時のボタン挙動用のパーツ
-
-function lowerLimit() {
-  if(pageNumber < 0) {
-    $('.restaurant .turnRight .btn').on('click',function(){
-      window.location.href ='../alice/';
-    });
-    $('.alice .turnRight .btn').on('click',function(){
-      window.location.href ='../hansel/';
-    });
-    $('.hansel .turnRight .btn').on('click',function(){
-      window.location.href ='../restaurant/';
-    });
-  };
-}
-function upperLimit() {
-  if(pageNumber < 0) {
-    $('.restaurant .turnleft .btn').on('click',function(){
-      window.location.href ='../hansel/';
-    });
-    $('.alice .turnleft .btn').on('click',function(){
-      window.location.href ='../restaurant/';
-    });
-    $('.hansel .turnleft .btn').on('click',function(){
-      window.location.href ='../alice/';
-    });
-  };
 }
 
 // モーダルウィンドウ
